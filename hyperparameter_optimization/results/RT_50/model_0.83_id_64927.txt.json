@@ -1,0 +1,29 @@
+{
+    "best_val_accuracy": 0.8268935680389404,
+    "best_val_loss": 2.1549940050898733,
+    "loss": -0.8268935680389404,
+    "model_name": "model_0.83_id_64927",
+    "real_loss": 2.1560789430058085,
+    "space": {
+        "activation": "relu",
+        "batch_size": 110.0,
+        "conv_dropout_drop_proba": 0.16374761154142825,
+        "conv_hiddn_units_mult": 0.5491939191706516,
+        "conv_kernel_size": 3.0,
+        "conv_pool_res_start_idx": 2.0,
+        "epochs": 80.0,
+        "fc_dropout_drop_proba": 0.13706798760438135,
+        "fc_units_1_mult": 0.5524700088913461,
+        "first_conv": 5,
+        "l2_weight_reg_mult": 1.3430197404589226,
+        "lr_rate_mult": 0.6613813553602365,
+        "nb_conv_pool_layers": 4,
+        "one_more_fc": 1.1269464848262143,
+        "optimizer": "Nadam",
+        "pooling_type": "max",
+        "res_conv_kernel_size": 3.0,
+        "residual": 4.0,
+        "use_BN": true
+    },
+    "status": "ok"
+}

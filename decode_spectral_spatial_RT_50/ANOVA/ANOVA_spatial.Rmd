@@ -1,0 +1,56 @@
+sink('ANOVA_spatial_overall.txt')  #write output to text
+
+
+rm(list = ls())  # clear environment
+cat("\014") #clear console
+dev.new() #clear figures
+
+library(lme4)
+library(lmerTest)
+library(lsmeans)
+library(ggplot2)
+library(effects)
+library(gridExtra)
+library(sjPlot)
+library("RColorBrewer")
+#library(readxl)
+
+
+
+# pp <- "/cp_RT_50_classification_bp_topomap/";  #set working directory
+# setwd(pp)
+
+data1 <- read.csv('~/decode_cp_RT_cnn/decode_spectral_spatial_RT_50/ANOVA/Overall_Spatial_Saliency.csv')
+newSal <- aggregate(saliency~subs*channels*groups, FUN=mean,data=data1)  #collapse each subject
+dim(newSal)
+
+# #Mixed-model ANOVA-----------------------------
+lm <- lmer(saliency ~ groups*channels + (1|subs),  data=newSal,REML=FALSE) 
+summary(lm)
+anova(lm)
+# #qqnorm(residuals(lm))
+lsmeans(lm,pairwise ~ channels, adjust="tukey")      # compare bands
+lsmeans(lm,pairwise ~ groups, adjust="tukey")    # compare groups
+lsmeans(lm,pairwise ~ groups|channels, adjust="tukey")
+
+cols <- colorRampPalette(brewer.pal(11,"RdBu"))(64)
+plot_model(lm, type = "int",terms = c("channels","groups"),axis.title=c("channels","Saliency"),legend.title="channels",colors = topo.colors(12))
+
+sink()
+
+sink('ANOVA_spatial_individual_models.txt')
+
+data2 <- read.csv('~/decode_cp_RT_cnn/decode_spectral_spatial_RT_50/ANOVA/Spatial_Saliency_all_SPSMs.csv')
+newSal <- aggregate(saliency~subs*channels*groups*model, FUN=mean,data=data2)  #collapse each subject
+dim(newSal)
+
+lm <- lmer(saliency ~ channels*groups*model + (1|subs),  data=newSal,REML=FALSE) 
+summary(lm)
+anova(lm)
+# #qqnorm(residuals(lm))
+lsmeans(lm,pairwise ~ model, adjust="tukey")      # compare bands
+lsmeans(lm,pairwise ~ groups|model, adjust="tukey")    # compare groups
+lsmeans(lm,pairwise ~ channels|model, adjust="tukey")
+plot_model(lm, type = "int",terms = c("channels","groups", "model"),axis.title=c("channels","Saliency"),legend.title="channels",colors = cm.colors(64))
+sink()
+

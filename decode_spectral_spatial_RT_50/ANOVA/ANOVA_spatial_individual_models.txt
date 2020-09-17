@@ -1,0 +1,196 @@
+[1] 96000     5
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: saliency ~ groups * channels + (1 | subs)
+   Data: newSal
+
+     AIC      BIC   logLik deviance df.resid 
+-69345.2 -67954.3  34866.6 -69733.2     9406 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.7225 -0.5974 -0.0463  0.5342  5.9390 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev.
+ subs     (Intercept) 2.033e-06 0.001426
+ Residual             4.051e-05 0.006364
+Number of obs: 9600, groups:  subs, 50
+
+Fixed effects:
+                          Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)              3.249e-02  9.224e-04  6.685e+03  35.223  < 2e-16 ***
+groupsmed                1.181e-02  1.273e-03  9.550e+03   9.279  < 2e-16 ***
+groupsslow               2.361e-02  1.273e-03  9.550e+03  18.546  < 2e-16 ***
+channels AF4            -3.421e-03  1.273e-03  9.550e+03  -2.687 0.007216 ** 
+channels C1             -1.198e-03  1.273e-03  9.550e+03  -0.941 0.346774    
+channels C2              3.995e-03  1.273e-03  9.550e+03   3.139 0.001703 ** 
+channels C3             -2.171e-02  1.273e-03  9.550e+03 -17.059  < 2e-16 ***
+channels C4             -2.108e-03  1.273e-03  9.550e+03  -1.656 0.097716 .  
+channels C5              8.743e-03  1.273e-03  9.550e+03   6.869 6.89e-12 ***
+channels C6              2.996e-02  1.273e-03  9.550e+03  23.534  < 2e-16 ***
+channels CB1            -4.871e-03  1.273e-03  9.550e+03  -3.827 0.000131 ***
+channels CB2            -1.468e-02  1.273e-03  9.550e+03 -11.529  < 2e-16 ***
+channels CP1             3.120e-04  1.273e-03  9.550e+03   0.245 0.806367    
+channels CP2             8.760e-03  1.273e-03  9.550e+03   6.882 6.27e-12 ***
+channels CP3             2.565e-02  1.273e-03  9.550e+03  20.152  < 2e-16 ***
+channels CP4             6.501e-04  1.273e-03  9.550e+03   0.511 0.609551    
+channels CP5            -2.305e-02  1.273e-03  9.550e+03 -18.107  < 2e-16 ***
+channels CP6             7.223e-03  1.273e-03  9.550e+03   5.675 1.43e-08 ***
+channels CPz            -8.470e-03  1.273e-03  9.550e+03  -6.654 3.01e-11 ***
+channels Cz              4.223e-03  1.273e-03  9.550e+03   3.318 0.000911 ***
+channels F1             -1.333e-02  1.273e-03  9.550e+03 -10.472  < 2e-16 ***
+channels F2             -1.456e-02  1.273e-03  9.550e+03 -11.441  < 2e-16 ***
+channels F3              3.953e-03  1.273e-03  9.550e+03   3.106 0.001904 ** 
+channels F4             -1.203e-02  1.273e-03  9.550e+03  -9.452  < 2e-16 ***
+channels F5              4.370e-03  1.273e-03  9.550e+03   3.433 0.000599 ***
+channels F6              1.880e-02  1.273e-03  9.550e+03  14.772  < 2e-16 ***
+channels F7              4.652e-03  1.273e-03  9.550e+03   3.655 0.000259 ***
+channels F8              1.753e-02  1.273e-03  9.550e+03  13.775  < 2e-16 ***
+channels FC1            -2.038e-02  1.273e-03  9.550e+03 -16.010  < 2e-16 ***
+channels FC2             2.219e-02  1.273e-03  9.550e+03  17.432  < 2e-16 ***
+channels FC3            -5.586e-03  1.273e-03  9.550e+03  -4.388 1.16e-05 ***
+channels FC4             1.513e-02  1.273e-03  9.550e+03  11.883  < 2e-16 ***
+channels FC5            -2.485e-02  1.273e-03  9.550e+03 -19.522  < 2e-16 ***
+channels FC6             3.269e-02  1.273e-03  9.550e+03  25.682  < 2e-16 ***
+channels FCz            -9.416e-04  1.273e-03  9.550e+03  -0.740 0.459495    
+channels Fp1            -5.590e-03  1.273e-03  9.550e+03  -4.392 1.14e-05 ***
+channels Fp2            -1.353e-02  1.273e-03  9.550e+03 -10.625  < 2e-16 ***
+channels Fpz            -1.418e-02  1.273e-03  9.550e+03 -11.140  < 2e-16 ***
+channels FT7             9.259e-03  1.273e-03  9.550e+03   7.274 3.77e-13 ***
+channels FT8            -1.130e-02  1.273e-03  9.550e+03  -8.880  < 2e-16 ***
+channels Fz             -1.198e-02  1.273e-03  9.550e+03  -9.414  < 2e-16 ***
+channels M1              7.285e-03  1.273e-03  9.550e+03   5.723 1.08e-08 ***
+channels M2             -1.088e-02  1.273e-03  9.550e+03  -8.549  < 2e-16 ***
+channels O1              2.011e-03  1.273e-03  9.550e+03   1.580 0.114086    
+channels O2              2.634e-02  1.273e-03  9.550e+03  20.691  < 2e-16 ***
+channels Oz             -3.923e-03  1.273e-03  9.550e+03  -3.082 0.002060 ** 
+channels P1              4.589e-03  1.273e-03  9.550e+03   3.605 0.000314 ***
+channels P2             -3.840e-03  1.273e-03  9.550e+03  -3.016 0.002564 ** 
+channels P3             -2.575e-02  1.273e-03  9.550e+03 -20.232  < 2e-16 ***
+channels P4             -2.050e-02  1.273e-03  9.550e+03 -16.103  < 2e-16 ***
+channels P5             -1.951e-02  1.273e-03  9.550e+03 -15.331  < 2e-16 ***
+channels P6             -1.108e-02  1.273e-03  9.550e+03  -8.707  < 2e-16 ***
+channels P7             -1.777e-02  1.273e-03  9.550e+03 -13.957  < 2e-16 ***
+channels P8              2.581e-02  1.273e-03  9.550e+03  20.281  < 2e-16 ***
+channels PO3             9.016e-03  1.273e-03  9.550e+03   7.083 1.51e-12 ***
+channels PO4             2.317e-03  1.273e-03  9.550e+03   1.820 0.068725 .  
+channels PO5            -5.528e-03  1.273e-03  9.550e+03  -4.343 1.42e-05 ***
+channels PO6             9.496e-04  1.273e-03  9.550e+03   0.746 0.455655    
+channels PO7             4.614e-03  1.273e-03  9.550e+03   3.624 0.000291 ***
+channels PO8            -1.990e-02  1.273e-03  9.550e+03 -15.637  < 2e-16 ***
+channels POz             1.293e-02  1.273e-03  9.550e+03  10.159  < 2e-16 ***
+channels Pz             -1.129e-02  1.273e-03  9.550e+03  -8.872  < 2e-16 ***
+channels T7             -7.522e-03  1.273e-03  9.550e+03  -5.909 3.56e-09 ***
+channels T8              1.912e-02  1.273e-03  9.550e+03  15.019  < 2e-16 ***
+channels TP7            -1.778e-02  1.273e-03  9.550e+03 -13.966  < 2e-16 ***
+channels TP8            -2.891e-03  1.273e-03  9.550e+03  -2.271 0.023145 *  
+groupsmed:channels AF4  -6.155e-03  1.800e-03  9.550e+03  -3.419 0.000631 ***
+groupsslow:channels AF4 -1.365e-02  1.800e-03  9.550e+03  -7.582 3.72e-14 ***
+groupsmed:channels C1   -6.326e-03  1.800e-03  9.550e+03  -3.514 0.000443 ***
+groupsslow:channels C1  -1.699e-02  1.800e-03  9.550e+03  -9.440  < 2e-16 ***
+groupsmed:channels C2   -5.284e-03  1.800e-03  9.550e+03  -2.935 0.003339 ** 
+groupsslow:channels C2  -2.837e-02  1.800e-03  9.550e+03 -15.759  < 2e-16 ***
+groupsmed:channels C3   -1.057e-02  1.800e-03  9.550e+03  -5.872 4.44e-09 ***
+groupsslow:channels C3  -1.937e-02  1.800e-03  9.550e+03 -10.759  < 2e-16 ***
+groupsmed:channels C4   -1.197e-02  1.800e-03  9.550e+03  -6.650 3.10e-11 ***
+groupsslow:channels C4  -2.875e-02  1.800e-03  9.550e+03 -15.969  < 2e-16 ***
+groupsmed:channels C5   -1.339e-03  1.800e-03  9.550e+03  -0.744 0.456818    
+groupsslow:channels C5  -7.630e-03  1.800e-03  9.550e+03  -4.239 2.27e-05 ***
+groupsmed:channels C6   -2.738e-03  1.800e-03  9.550e+03  -1.521 0.128291    
+groupsslow:channels C6  -3.400e-02  1.800e-03  9.550e+03 -18.887  < 2e-16 ***
+groupsmed:channels CB1  -3.692e-03  1.800e-03  9.550e+03  -2.051 0.040290 *  
+groupsslow:channels CB1 -1.413e-02  1.800e-03  9.550e+03  -7.851 4.57e-15 ***
+groupsmed:channels CB2  -8.380e-03  1.800e-03  9.550e+03  -4.655 3.28e-06 ***
+groupsslow:channels CB2 -1.209e-02  1.800e-03  9.550e+03  -6.715 1.99e-11 ***
+groupsmed:channels CP1  -2.020e-03  1.800e-03  9.550e+03  -1.122 0.261833    
+groupsslow:channels CP1 -1.231e-02  1.800e-03  9.550e+03  -6.838 8.54e-12 ***
+groupsmed:channels CP2  -4.032e-03  1.800e-03  9.550e+03  -2.240 0.025129 *  
+groupsslow:channels CP2 -1.199e-02  1.800e-03  9.550e+03  -6.663 2.84e-11 ***
+groupsmed:channels CP3  -1.441e-03  1.800e-03  9.550e+03  -0.801 0.423385    
+groupsslow:channels CP3 -3.196e-02  1.800e-03  9.550e+03 -17.752  < 2e-16 ***
+groupsmed:channels CP4  -1.262e-02  1.800e-03  9.550e+03  -7.010 2.55e-12 ***
+groupsslow:channels CP4 -1.794e-02  1.800e-03  9.550e+03  -9.966  < 2e-16 ***
+groupsmed:channels CP5  -1.038e-02  1.800e-03  9.550e+03  -5.767 8.31e-09 ***
+groupsslow:channels CP5 -9.329e-03  1.800e-03  9.550e+03  -5.183 2.23e-07 ***
+groupsmed:channels CP6  -1.563e-02  1.800e-03  9.550e+03  -8.681  < 2e-16 ***
+groupsslow:channels CP6 -3.159e-02  1.800e-03  9.550e+03 -17.551  < 2e-16 ***
+groupsmed:channels CPz  -1.161e-02  1.800e-03  9.550e+03  -6.450 1.18e-10 ***
+groupsslow:channels CPz -1.955e-02  1.800e-03  9.550e+03 -10.861  < 2e-16 ***
+groupsmed:channels Cz   -1.186e-02  1.800e-03  9.550e+03  -6.588 4.69e-11 ***
+groupsslow:channels Cz  -1.339e-02  1.800e-03  9.550e+03  -7.437 1.12e-13 ***
+groupsmed:channels F1   -7.939e-03  1.800e-03  9.550e+03  -4.410 1.04e-05 ***
+groupsslow:channels F1  -1.538e-02  1.800e-03  9.550e+03  -8.541  < 2e-16 ***
+groupsmed:channels F2   -8.978e-03  1.800e-03  9.550e+03  -4.987 6.23e-07 ***
+groupsslow:channels F2  -1.491e-02  1.800e-03  9.550e+03  -8.281  < 2e-16 ***
+groupsmed:channels F3   -1.006e-02  1.800e-03  9.550e+03  -5.591 2.33e-08 ***
+groupsslow:channels F3  -2.146e-02  1.800e-03  9.550e+03 -11.922  < 2e-16 ***
+groupsmed:channels F4   -1.353e-02  1.800e-03  9.550e+03  -7.516 6.18e-14 ***
+groupsslow:channels F4  -2.278e-02  1.800e-03  9.550e+03 -12.654  < 2e-16 ***
+groupsmed:channels F5   -4.601e-03  1.800e-03  9.550e+03  -2.556 0.010601 *  
+groupsslow:channels F5  -2.483e-02  1.800e-03  9.550e+03 -13.792  < 2e-16 ***
+groupsmed:channels F6   -6.777e-03  1.800e-03  9.550e+03  -3.765 0.000168 ***
+groupsslow:channels F6  -2.929e-02  1.800e-03  9.550e+03 -16.269  < 2e-16 ***
+groupsmed:channels F7   -1.523e-02  1.800e-03  9.550e+03  -8.463  < 2e-16 ***
+groupsslow:channels F7  -1.857e-02  1.800e-03  9.550e+03 -10.318  < 2e-16 ***
+groupsmed:channels F8   -2.912e-03  1.800e-03  9.550e+03  -1.617 0.105831    
+groupsslow:channels F8  -8.531e-03  1.800e-03  9.550e+03  -4.739 2.18e-06 ***
+groupsmed:channels FC1  -1.275e-02  1.800e-03  9.550e+03  -7.083 1.51e-12 ***
+groupsslow:channels FC1 -2.048e-02  1.800e-03  9.550e+03 -11.376  < 2e-16 ***
+groupsmed:channels FC2   4.080e-03  1.800e-03  9.550e+03   2.267 0.023434 *  
+groupsslow:channels FC2 -2.555e-02  1.800e-03  9.550e+03 -14.196  < 2e-16 ***
+groupsmed:channels FC3  -7.734e-03  1.800e-03  9.550e+03  -4.296 1.76e-05 ***
+groupsslow:channels FC3 -1.839e-02  1.800e-03  9.550e+03 -10.214  < 2e-16 ***
+groupsmed:channels FC4  -4.464e-03  1.800e-03  9.550e+03  -2.480 0.013171 *  
+groupsslow:channels FC4 -2.280e-02  1.800e-03  9.550e+03 -12.663  < 2e-16 ***
+groupsmed:channels FC5  -1.210e-02  1.800e-03  9.550e+03  -6.724 1.87e-11 ***
+groupsslow:channels FC5 -1.449e-02  1.800e-03  9.550e+03  -8.050 9.25e-16 ***
+groupsmed:channels FC6   3.355e-04  1.800e-03  9.550e+03   0.186 0.852169    
+groupsslow:channels FC6 -3.921e-02  1.800e-03  9.550e+03 -21.780  < 2e-16 ***
+groupsmed:channels FCz  -1.174e-02  1.800e-03  9.550e+03  -6.524 7.21e-11 ***
+groupsslow:channels FCz -2.058e-02  1.800e-03  9.550e+03 -11.430  < 2e-16 ***
+groupsmed:channels Fp1  -7.041e-03  1.800e-03  9.550e+03  -3.911 9.25e-05 ***
+groupsslow:channels Fp1 -1.706e-02  1.800e-03  9.550e+03  -9.475  < 2e-16 ***
+groupsmed:channels Fp2  -1.027e-02  1.800e-03  9.550e+03  -5.708 1.18e-08 ***
+groupsslow:channels Fp2 -8.908e-03  1.800e-03  9.550e+03  -4.948 7.61e-07 ***
+groupsmed:channels Fpz  -5.129e-03  1.800e-03  9.550e+03  -2.849 0.004389 ** 
+groupsslow:channels Fpz  1.416e-02  1.800e-03  9.550e+03   7.868 3.98e-15 ***
+groupsmed:channels FT7   1.336e-03  1.800e-03  9.550e+03   0.742 0.458069    
+groupsslow:channels FT7 -2.927e-02  1.800e-03  9.550e+03 -16.261  < 2e-16 ***
+groupsmed:channels FT8  -6.429e-03  1.800e-03  9.550e+03  -3.572 0.000357 ***
+groupsslow:channels FT8 -1.453e-02  1.800e-03  9.550e+03  -8.074 7.63e-16 ***
+groupsmed:channels Fz   -4.701e-03  1.800e-03  9.550e+03  -2.612 0.009022 ** 
+groupsslow:channels Fz  -4.078e-03  1.800e-03  9.550e+03  -2.265 0.023509 *  
+groupsmed:channels M1   -4.765e-03  1.800e-03  9.550e+03  -2.647 0.008137 ** 
+groupsslow:channels M1  -2.313e-02  1.800e-03  9.550e+03 -12.847  < 2e-16 ***
+groupsmed:channels M2   -6.560e-03  1.800e-03  9.550e+03  -3.644 0.000270 ***
+groupsslow:channels M2   2.213e-03  1.800e-03  9.550e+03   1.229 0.218930    
+groupsmed:channels O1   -2.905e-03  1.800e-03  9.550e+03  -1.614 0.106618    
+groupsslow:channels O1  -1.251e-02  1.800e-03  9.550e+03  -6.950 3.90e-12 ***
+groupsmed:channels O2   -1.361e-03  1.800e-03  9.550e+03  -0.756 0.449651    
+groupsslow:channels O2  -2.321e-02  1.800e-03  9.550e+03 -12.893  < 2e-16 ***
+groupsmed:channels Oz   -4.275e-03  1.800e-03  9.550e+03  -2.375 0.017569 *  
+groupsslow:channels Oz  -1.368e-02  1.800e-03  9.550e+03  -7.602 3.19e-14 ***
+groupsmed:channels P1   -5.594e-04  1.800e-03  9.550e+03  -0.311 0.756000    
+groupsslow:channels P1  -7.315e-03  1.800e-03  9.550e+03  -4.063 4.87e-05 ***
+groupsmed:channels P2   -1.266e-02  1.800e-03  9.550e+03  -7.034 2.15e-12 ***
+groupsslow:channels P2   6.977e-03  1.800e-03  9.550e+03   3.876 0.000107 ***
+groupsmed:channels P3   -1.074e-02  1.800e-03  9.550e+03  -5.966 2.52e-09 ***
+groupsslow:channels P3  -1.789e-02  1.800e-03  9.550e+03  -9.938  < 2e-16 ***
+groupsmed:channels P4   -7.986e-03  1.800e-03  9.550e+03  -4.436 9.25e-06 ***
+groupsslow:channels P4   2.170e-03  1.800e-03  9.550e+03   1.205 0.228144    
+groupsmed:channels P5   -7.902e-03  1.800e-03  9.550e+03  -4.390 1.15e-05 ***
+groupsslow:channels P5  -4.900e-03  1.800e-03  9.550e+03  -2.722 0.006504 ** 
+groupsmed:channels P6   -1.061e-02  1.800e-03  9.550e+03  -5.895 3.88e-09 ***
+groupsslow:channels P6  -2.509e-02  1.800e-03  9.550e+03 -13.939  < 2e-16 ***
+groupsmed:channels P7   -1.539e-02  1.800e-03  9.550e+03  -8.549  < 2e-16 ***
+groupsslow:channels P7  -3.372e-02  1.800e-03  9.550e+03 -18.731  < 2e-16 ***
+ [ reached getOption("max.print") -- omitted 26 rows ]
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Type III Analysis of Variance Table with Satterthwaite's method
+                 Sum Sq  Mean Sq NumDF DenDF F value    Pr(>F)    
+groups          0.06550 0.032750     2  9550 808.523 < 2.2e-16 ***
+channels        1.88891 0.029983    63  9550 740.205 < 2.2e-16 ***
+groups:channels 0.26929 0.002137   126  9550  52.764 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

@@ -1,0 +1,455 @@
+[1] 4500    5
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: saliency ~ bands * groups * model + (1 | subs)
+   Data: newSal
+
+     AIC      BIC   logLik deviance df.resid 
+-45774.5 -45184.7  22979.3 -45958.5     4408 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-9.0066 -0.4016  0.0101  0.3682  7.5349 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev.
+ subs     (Intercept) 2.125e-07 0.000461
+ Residual             2.094e-06 0.001447
+Number of obs: 4500, groups:  subs, 50
+
+Fixed effects:
+                                     Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                         9.457e-04  2.148e-04  2.563e+03   4.404 1.11e-05 ***
+bandsbeta                           1.527e-04  2.894e-04  4.450e+03   0.528 0.597725    
+bandsgamma                          2.272e-02  2.894e-04  4.450e+03  78.519  < 2e-16 ***
+groupsmed                           4.114e-05  2.894e-04  4.450e+03   0.142 0.886952    
+groupsslow                          5.411e-04  2.894e-04  4.450e+03   1.870 0.061588 .  
+modelSPSM-10                        6.623e-03  2.894e-04  4.450e+03  22.886  < 2e-16 ***
+modelSPSM-2                         1.947e-02  2.894e-04  4.450e+03  67.270  < 2e-16 ***
+modelSPSM-3                         6.361e-03  2.894e-04  4.450e+03  21.982  < 2e-16 ***
+modelSPSM-4                         1.808e-02  2.894e-04  4.450e+03  62.466  < 2e-16 ***
+modelSPSM-5                         1.526e-02  2.894e-04  4.450e+03  52.721  < 2e-16 ***
+modelSPSM-6                         1.353e-02  2.894e-04  4.450e+03  46.757  < 2e-16 ***
+modelSPSM-7                         1.805e-03  2.894e-04  4.450e+03   6.238 4.85e-10 ***
+modelSPSM-8                         1.735e-03  2.894e-04  4.450e+03   5.997 2.17e-09 ***
+modelSPSM-9                         4.723e-03  2.894e-04  4.450e+03  16.321  < 2e-16 ***
+bandsbeta:groupsmed                 8.506e-05  4.093e-04  4.450e+03   0.208 0.835366    
+bandsgamma:groupsmed                4.822e-03  4.093e-04  4.450e+03  11.782  < 2e-16 ***
+bandsbeta:groupsslow               -1.921e-04  4.093e-04  4.450e+03  -0.469 0.638807    
+bandsgamma:groupsslow               8.310e-03  4.093e-04  4.450e+03  20.305  < 2e-16 ***
+bandsbeta:modelSPSM-10             -2.065e-03  4.093e-04  4.450e+03  -5.045 4.71e-07 ***
+bandsgamma:modelSPSM-10            -2.152e-02  4.093e-04  4.450e+03 -52.577  < 2e-16 ***
+bandsbeta:modelSPSM-2              -1.861e-02  4.093e-04  4.450e+03 -45.468  < 2e-16 ***
+bandsgamma:modelSPSM-2             -3.792e-02  4.093e-04  4.450e+03 -92.652  < 2e-16 ***
+bandsbeta:modelSPSM-3              -1.827e-03  4.093e-04  4.450e+03  -4.465 8.22e-06 ***
+bandsgamma:modelSPSM-3             -2.374e-02  4.093e-04  4.450e+03 -58.018  < 2e-16 ***
+bandsbeta:modelSPSM-4              -1.547e-02  4.093e-04  4.450e+03 -37.804  < 2e-16 ***
+bandsgamma:modelSPSM-4             -3.160e-02  4.093e-04  4.450e+03 -77.206  < 2e-16 ***
+bandsbeta:modelSPSM-5              -1.262e-02  4.093e-04  4.450e+03 -30.841  < 2e-16 ***
+bandsgamma:modelSPSM-5             -2.874e-02  4.093e-04  4.450e+03 -70.231  < 2e-16 ***
+bandsbeta:modelSPSM-6              -1.188e-02  4.093e-04  4.450e+03 -29.024  < 2e-16 ***
+bandsgamma:modelSPSM-6             -2.225e-02  4.093e-04  4.450e+03 -54.378  < 2e-16 ***
+bandsbeta:modelSPSM-7              -1.490e-04  4.093e-04  4.450e+03  -0.364 0.715730    
+bandsgamma:modelSPSM-7              1.399e-03  4.093e-04  4.450e+03   3.419 0.000634 ***
+bandsbeta:modelSPSM-8               2.844e-03  4.093e-04  4.450e+03   6.949 4.23e-12 ***
+bandsgamma:modelSPSM-8             -3.030e-03  4.093e-04  4.450e+03  -7.403 1.58e-13 ***
+bandsbeta:modelSPSM-9              -4.007e-03  4.093e-04  4.450e+03  -9.791  < 2e-16 ***
+bandsgamma:modelSPSM-9              2.851e-03  4.093e-04  4.450e+03   6.966 3.74e-12 ***
+groupsmed:modelSPSM-10              1.108e-03  4.093e-04  4.450e+03   2.708 0.006800 ** 
+groupsslow:modelSPSM-10             6.153e-04  4.093e-04  4.450e+03   1.503 0.132791    
+groupsmed:modelSPSM-2               2.804e-03  4.093e-04  4.450e+03   6.851 8.32e-12 ***
+groupsslow:modelSPSM-2              4.549e-03  4.093e-04  4.450e+03  11.115  < 2e-16 ***
+groupsmed:modelSPSM-3               2.034e-03  4.093e-04  4.450e+03   4.970 6.95e-07 ***
+groupsslow:modelSPSM-3              6.486e-04  4.093e-04  4.450e+03   1.585 0.113069    
+groupsmed:modelSPSM-4               2.666e-03  4.093e-04  4.450e+03   6.514 8.12e-11 ***
+groupsslow:modelSPSM-4              1.529e-03  4.093e-04  4.450e+03   3.736 0.000189 ***
+groupsmed:modelSPSM-5               1.909e-03  4.093e-04  4.450e+03   4.664 3.19e-06 ***
+groupsslow:modelSPSM-5              1.119e-03  4.093e-04  4.450e+03   2.735 0.006258 ** 
+groupsmed:modelSPSM-6               2.074e-03  4.093e-04  4.450e+03   5.068 4.18e-07 ***
+groupsslow:modelSPSM-6              8.480e-04  4.093e-04  4.450e+03   2.072 0.038326 *  
+groupsmed:modelSPSM-7               6.715e-05  4.093e-04  4.450e+03   0.164 0.869674    
+groupsslow:modelSPSM-7              6.623e-04  4.093e-04  4.450e+03   1.618 0.105662    
+groupsmed:modelSPSM-8               8.662e-05  4.093e-04  4.450e+03   0.212 0.832379    
+groupsslow:modelSPSM-8              1.497e-03  4.093e-04  4.450e+03   3.658 0.000257 ***
+groupsmed:modelSPSM-9               6.570e-04  4.093e-04  4.450e+03   1.605 0.108493    
+groupsslow:modelSPSM-9              2.527e-04  4.093e-04  4.450e+03   0.618 0.536886    
+bandsbeta:groupsmed:modelSPSM-10   -2.368e-04  5.788e-04  4.450e+03  -0.409 0.682436    
+bandsgamma:groupsmed:modelSPSM-10  -4.711e-03  5.788e-04  4.450e+03  -8.140 5.10e-16 ***
+bandsbeta:groupsslow:modelSPSM-10   1.422e-04  5.788e-04  4.450e+03   0.246 0.805879    
+bandsgamma:groupsslow:modelSPSM-10 -9.138e-03  5.788e-04  4.450e+03 -15.789  < 2e-16 ***
+bandsbeta:groupsmed:modelSPSM-2    -2.893e-03  5.788e-04  4.450e+03  -4.999 5.98e-07 ***
+bandsgamma:groupsmed:modelSPSM-2   -6.711e-03  5.788e-04  4.450e+03 -11.595  < 2e-16 ***
+bandsbeta:groupsslow:modelSPSM-2   -5.051e-03  5.788e-04  4.450e+03  -8.727  < 2e-16 ***
+bandsgamma:groupsslow:modelSPSM-2  -1.035e-02  5.788e-04  4.450e+03 -17.888  < 2e-16 ***
+bandsbeta:groupsmed:modelSPSM-3    -8.998e-04  5.788e-04  4.450e+03  -1.555 0.120092    
+bandsgamma:groupsmed:modelSPSM-3   -6.209e-03  5.788e-04  4.450e+03 -10.728  < 2e-16 ***
+bandsbeta:groupsslow:modelSPSM-3   -6.093e-04  5.788e-04  4.450e+03  -1.053 0.292538    
+bandsgamma:groupsslow:modelSPSM-3  -9.479e-03  5.788e-04  4.450e+03 -16.378  < 2e-16 ***
+bandsbeta:groupsmed:modelSPSM-4    -2.570e-03  5.788e-04  4.450e+03  -4.441 9.18e-06 ***
+bandsgamma:groupsmed:modelSPSM-4   -6.161e-03  5.788e-04  4.450e+03 -10.644  < 2e-16 ***
+bandsbeta:groupsslow:modelSPSM-4   -1.500e-04  5.788e-04  4.450e+03  -0.259 0.795464    
+bandsgamma:groupsslow:modelSPSM-4  -6.062e-03  5.788e-04  4.450e+03 -10.474  < 2e-16 ***
+bandsbeta:groupsmed:modelSPSM-5    -1.708e-03  5.788e-04  4.450e+03  -2.952 0.003177 ** 
+bandsgamma:groupsmed:modelSPSM-5   -5.527e-03  5.788e-04  4.450e+03  -9.550  < 2e-16 ***
+bandsbeta:groupsslow:modelSPSM-5   -8.259e-04  5.788e-04  4.450e+03  -1.427 0.153638    
+bandsgamma:groupsslow:modelSPSM-5  -6.211e-03  5.788e-04  4.450e+03 -10.731  < 2e-16 ***
+bandsbeta:groupsmed:modelSPSM-6    -2.145e-03  5.788e-04  4.450e+03  -3.707 0.000213 ***
+bandsgamma:groupsmed:modelSPSM-6   -4.684e-03  5.788e-04  4.450e+03  -8.094 7.41e-16 ***
+bandsbeta:groupsslow:modelSPSM-6    5.334e-04  5.788e-04  4.450e+03   0.922 0.356805    
+bandsgamma:groupsslow:modelSPSM-6  -5.326e-03  5.788e-04  4.450e+03  -9.203  < 2e-16 ***
+bandsbeta:groupsmed:modelSPSM-7     1.656e-04  5.788e-04  4.450e+03   0.286 0.774776    
+bandsgamma:groupsmed:modelSPSM-7    4.043e-04  5.788e-04  4.450e+03   0.699 0.484888    
+bandsbeta:groupsslow:modelSPSM-7    2.502e-04  5.788e-04  4.450e+03   0.432 0.665496    
+bandsgamma:groupsslow:modelSPSM-7  -1.024e-02  5.788e-04  4.450e+03 -17.692  < 2e-16 ***
+bandsbeta:groupsmed:modelSPSM-8     6.551e-04  5.788e-04  4.450e+03   1.132 0.257762    
+bandsgamma:groupsmed:modelSPSM-8   -1.218e-03  5.788e-04  4.450e+03  -2.105 0.035380 *  
+bandsbeta:groupsslow:modelSPSM-8   -2.116e-04  5.788e-04  4.450e+03  -0.366 0.714626    
+bandsgamma:groupsslow:modelSPSM-8  -7.303e-03  5.788e-04  4.450e+03 -12.618  < 2e-16 ***
+bandsbeta:groupsmed:modelSPSM-9    -7.733e-04  5.788e-04  4.450e+03  -1.336 0.181585    
+bandsgamma:groupsmed:modelSPSM-9    5.800e-04  5.788e-04  4.450e+03   1.002 0.316376    
+bandsbeta:groupsslow:modelSPSM-9    4.380e-05  5.788e-04  4.450e+03   0.076 0.939684    
+bandsgamma:groupsslow:modelSPSM-9  -1.107e-02  5.788e-04  4.450e+03 -19.120  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Type III Analysis of Variance Table with Satterthwaite's method
+                     Sum Sq  Mean Sq NumDF DenDF   F value    Pr(>F)    
+bands              0.142862 0.071431     2  4450 34118.649 < 2.2e-16 ***
+groups             0.002661 0.001331     2  4450   635.615 < 2.2e-16 ***
+model              0.016001 0.001778     9  4450   849.186 < 2.2e-16 ***
+bands:groups       0.000729 0.000182     4  4450    87.076 < 2.2e-16 ***
+bands:model        0.204354 0.011353    18  4450  5422.688 < 2.2e-16 ***
+groups:model       0.001485 0.000082    18  4450    39.394 < 2.2e-16 ***
+bands:groups:model 0.003814 0.000106    36  4450    50.598 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+$lsmeans
+ model    lsmean       SE  df asymp.LCL asymp.UCL
+ SPSM-1  0.01021 9.44e-05 Inf   0.00995   0.01048
+ SPSM-10 0.00800 9.44e-05 Inf   0.00774   0.00826
+ SPSM-2  0.01051 9.44e-05 Inf   0.01024   0.01077
+ SPSM-3  0.00703 9.44e-05 Inf   0.00677   0.00730
+ SPSM-4  0.01234 9.44e-05 Inf   0.01207   0.01260
+ SPSM-5  0.01110 9.44e-05 Inf   0.01084   0.01137
+ SPSM-6  0.01205 9.44e-05 Inf   0.01178   0.01231
+ SPSM-7  0.01163 9.44e-05 Inf   0.01137   0.01189
+ SPSM-8  0.01152 9.44e-05 Inf   0.01125   0.01178
+ SPSM-9  0.01361 9.44e-05 Inf   0.01334   0.01387
+
+Results are averaged over the levels of: bands, groups 
+Degrees-of-freedom method: asymptotic 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 10 estimates 
+
+$contrasts
+ contrast              estimate       SE  df z.ratio p.value
+ (SPSM-1) - (SPSM-10)  0.002213 9.65e-05 Inf  22.937 <.0001 
+ (SPSM-1) - (SPSM-2)  -0.000297 9.65e-05 Inf  -3.080 0.0640 
+ (SPSM-1) - (SPSM-3)   0.003179 9.65e-05 Inf  32.956 <.0001 
+ (SPSM-1) - (SPSM-4)  -0.002125 9.65e-05 Inf -22.032 <.0001 
+ (SPSM-1) - (SPSM-5)  -0.000892 9.65e-05 Inf  -9.250 <.0001 
+ (SPSM-1) - (SPSM-6)  -0.001836 9.65e-05 Inf -19.031 <.0001 
+ (SPSM-1) - (SPSM-7)  -0.001418 9.65e-05 Inf -14.704 <.0001 
+ (SPSM-1) - (SPSM-8)  -0.001304 9.65e-05 Inf -13.517 <.0001 
+ (SPSM-1) - (SPSM-9)  -0.003395 9.65e-05 Inf -35.194 <.0001 
+ (SPSM-10) - (SPSM-2) -0.002510 9.65e-05 Inf -26.018 <.0001 
+ (SPSM-10) - (SPSM-3)  0.000966 9.65e-05 Inf  10.018 <.0001 
+ (SPSM-10) - (SPSM-4) -0.004338 9.65e-05 Inf -44.970 <.0001 
+ (SPSM-10) - (SPSM-5) -0.003105 9.65e-05 Inf -32.188 <.0001 
+ (SPSM-10) - (SPSM-6) -0.004048 9.65e-05 Inf -41.968 <.0001 
+ (SPSM-10) - (SPSM-7) -0.003631 9.65e-05 Inf -37.642 <.0001 
+ (SPSM-10) - (SPSM-8) -0.003516 9.65e-05 Inf -36.454 <.0001 
+ (SPSM-10) - (SPSM-9) -0.005608 9.65e-05 Inf -58.132 <.0001 
+ (SPSM-2) - (SPSM-3)   0.003476 9.65e-05 Inf  36.036 <.0001 
+ (SPSM-2) - (SPSM-4)  -0.001828 9.65e-05 Inf -18.952 <.0001 
+ (SPSM-2) - (SPSM-5)  -0.000595 9.65e-05 Inf  -6.170 <.0001 
+ (SPSM-2) - (SPSM-6)  -0.001539 9.65e-05 Inf -15.951 <.0001 
+ (SPSM-2) - (SPSM-7)  -0.001121 9.65e-05 Inf -11.624 <.0001 
+ (SPSM-2) - (SPSM-8)  -0.001007 9.65e-05 Inf -10.436 <.0001 
+ (SPSM-2) - (SPSM-9)  -0.003098 9.65e-05 Inf -32.114 <.0001 
+ (SPSM-3) - (SPSM-4)  -0.005304 9.65e-05 Inf -54.988 <.0001 
+ (SPSM-3) - (SPSM-5)  -0.004071 9.65e-05 Inf -42.206 <.0001 
+ (SPSM-3) - (SPSM-6)  -0.005015 9.65e-05 Inf -51.987 <.0001 
+ (SPSM-3) - (SPSM-7)  -0.004597 9.65e-05 Inf -47.660 <.0001 
+ (SPSM-3) - (SPSM-8)  -0.004483 9.65e-05 Inf -46.472 <.0001 
+ (SPSM-3) - (SPSM-9)  -0.006574 9.65e-05 Inf -68.150 <.0001 
+ (SPSM-4) - (SPSM-5)   0.001233 9.65e-05 Inf  12.782 <.0001 
+ (SPSM-4) - (SPSM-6)   0.000289 9.65e-05 Inf   3.001 0.0801 
+ (SPSM-4) - (SPSM-7)   0.000707 9.65e-05 Inf   7.328 <.0001 
+ (SPSM-4) - (SPSM-8)   0.000821 9.65e-05 Inf   8.516 <.0001 
+ (SPSM-4) - (SPSM-9)  -0.001270 9.65e-05 Inf -13.162 <.0001 
+ (SPSM-5) - (SPSM-6)  -0.000943 9.65e-05 Inf  -9.781 <.0001 
+ (SPSM-5) - (SPSM-7)  -0.000526 9.65e-05 Inf  -5.454 <.0001 
+ (SPSM-5) - (SPSM-8)  -0.000412 9.65e-05 Inf  -4.266 0.0008 
+ (SPSM-5) - (SPSM-9)  -0.002503 9.65e-05 Inf -25.944 <.0001 
+ (SPSM-6) - (SPSM-7)   0.000417 9.65e-05 Inf   4.327 0.0006 
+ (SPSM-6) - (SPSM-8)   0.000532 9.65e-05 Inf   5.514 <.0001 
+ (SPSM-6) - (SPSM-9)  -0.001559 9.65e-05 Inf -16.163 <.0001 
+ (SPSM-7) - (SPSM-8)   0.000115 9.65e-05 Inf   1.188 0.9743 
+ (SPSM-7) - (SPSM-9)  -0.001976 9.65e-05 Inf -20.490 <.0001 
+ (SPSM-8) - (SPSM-9)  -0.002091 9.65e-05 Inf -21.678 <.0001 
+
+Results are averaged over the levels of: bands, groups 
+Degrees-of-freedom method: asymptotic 
+P value adjustment: tukey method for comparing a family of 10 estimates 
+
+$lsmeans
+model = SPSM-1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.00857 0.000135 Inf   0.00825   0.00889
+ med    0.01025 0.000135 Inf   0.00993   0.01057
+ slow   0.01182 0.000135 Inf   0.01150   0.01214
+
+model = SPSM-10:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.00733 0.000135 Inf   0.00701   0.00766
+ med    0.00847 0.000135 Inf   0.00815   0.00879
+ slow   0.00820 0.000135 Inf   0.00787   0.00852
+
+model = SPSM-2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.00920 0.000135 Inf   0.00887   0.00952
+ med    0.01047 0.000135 Inf   0.01015   0.01080
+ slow   0.01186 0.000135 Inf   0.01153   0.01218
+
+model = SPSM-3:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.00641 0.000135 Inf   0.00609   0.00673
+ med    0.00775 0.000135 Inf   0.00743   0.00807
+ slow   0.00694 0.000135 Inf   0.00662   0.00726
+
+model = SPSM-4:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01096 0.000135 Inf   0.01064   0.01128
+ med    0.01239 0.000135 Inf   0.01207   0.01271
+ slow   0.01366 0.000135 Inf   0.01334   0.01399
+
+model = SPSM-5:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01004 0.000135 Inf   0.00972   0.01036
+ med    0.01121 0.000135 Inf   0.01089   0.01154
+ slow   0.01206 0.000135 Inf   0.01174   0.01238
+
+model = SPSM-6:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01072 0.000135 Inf   0.01040   0.01105
+ med    0.01220 0.000135 Inf   0.01188   0.01252
+ slow   0.01322 0.000135 Inf   0.01290   0.01354
+
+model = SPSM-7:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01079 0.000135 Inf   0.01047   0.01111
+ med    0.01273 0.000135 Inf   0.01240   0.01305
+ slow   0.01137 0.000135 Inf   0.01105   0.01169
+
+model = SPSM-8:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01024 0.000135 Inf   0.00992   0.01057
+ med    0.01182 0.000135 Inf   0.01150   0.01214
+ slow   0.01248 0.000135 Inf   0.01216   0.01281
+
+model = SPSM-9:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01291 0.000135 Inf   0.01259   0.01323
+ med    0.01518 0.000135 Inf   0.01486   0.01550
+ slow   0.01273 0.000135 Inf   0.01241   0.01306
+
+Results are averaged over the levels of: bands 
+Degrees-of-freedom method: asymptotic 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 3 estimates 
+
+$contrasts
+model = SPSM-1:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.001677 0.000167 Inf -10.036 <.0001 
+ fast - slow -0.003247 0.000167 Inf -19.434 <.0001 
+ med - slow  -0.001570 0.000167 Inf  -9.397 <.0001 
+
+model = SPSM-10:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.001136 0.000167 Inf  -6.798 <.0001 
+ fast - slow -0.000864 0.000167 Inf  -5.168 <.0001 
+ med - slow   0.000272 0.000167 Inf   1.629 0.2333 
+
+model = SPSM-2:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.001279 0.000167 Inf  -7.657 <.0001 
+ fast - slow -0.002661 0.000167 Inf -15.928 <.0001 
+ med - slow  -0.001382 0.000167 Inf  -8.271 <.0001 
+
+model = SPSM-3:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.001341 0.000167 Inf  -8.028 <.0001 
+ fast - slow -0.000533 0.000167 Inf  -3.189 0.0041 
+ med - slow   0.000808 0.000167 Inf   4.839 <.0001 
+
+model = SPSM-4:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.001432 0.000167 Inf  -8.574 <.0001 
+ fast - slow -0.002705 0.000167 Inf -16.192 <.0001 
+ med - slow  -0.001273 0.000167 Inf  -7.619 <.0001 
+
+model = SPSM-5:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.001174 0.000167 Inf  -7.026 <.0001 
+ fast - slow -0.002021 0.000167 Inf -12.095 <.0001 
+ med - slow  -0.000847 0.000167 Inf  -5.069 <.0001 
+
+model = SPSM-6:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.001474 0.000167 Inf  -8.825 <.0001 
+ fast - slow -0.002497 0.000167 Inf -14.946 <.0001 
+ med - slow  -0.001023 0.000167 Inf  -6.121 <.0001 
+
+model = SPSM-7:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.001934 0.000167 Inf -11.575 <.0001 
+ fast - slow -0.000579 0.000167 Inf  -3.468 0.0015 
+ med - slow   0.001354 0.000167 Inf   8.107 <.0001 
+
+model = SPSM-8:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.001576 0.000167 Inf  -9.431 <.0001 
+ fast - slow -0.002239 0.000167 Inf -13.403 <.0001 
+ med - slow  -0.000663 0.000167 Inf  -3.971 0.0002 
+
+model = SPSM-9:
+ contrast     estimate       SE  df z.ratio p.value
+ fast - med  -0.002269 0.000167 Inf -13.583 <.0001 
+ fast - slow  0.000174 0.000167 Inf   1.044 0.5494 
+ med - slow   0.002444 0.000167 Inf  14.626 <.0001 
+
+Results are averaged over the levels of: bands 
+Degrees-of-freedom method: asymptotic 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+$lsmeans
+model = SPSM-1:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.00114 0.000135 Inf  0.000818   0.00146
+ beta  0.00126 0.000135 Inf  0.000935   0.00158
+ gamma 0.02824 0.000135 Inf  0.027917   0.02856
+
+model = SPSM-10:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.00834 0.000135 Inf  0.008015   0.00866
+ beta  0.00636 0.000135 Inf  0.006036   0.00668
+ gamma 0.00930 0.000135 Inf  0.008981   0.00962
+
+model = SPSM-2:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.02306 0.000135 Inf  0.022735   0.02338
+ beta  0.00192 0.000135 Inf  0.001597   0.00224
+ gamma 0.00655 0.000135 Inf  0.006229   0.00687
+
+model = SPSM-3:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.00840 0.000135 Inf  0.008073   0.00872
+ beta  0.00618 0.000135 Inf  0.005860   0.00650
+ gamma 0.00652 0.000135 Inf  0.006199   0.00684
+
+model = SPSM-4:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.02061 0.000135 Inf  0.020293   0.02094
+ beta  0.00435 0.000135 Inf  0.004031   0.00468
+ gamma 0.01204 0.000135 Inf  0.011721   0.01237
+
+model = SPSM-5:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.01741 0.000135 Inf  0.017084   0.01773
+ beta  0.00406 0.000135 Inf  0.003734   0.00438
+ gamma 0.01185 0.000135 Inf  0.011528   0.01217
+
+model = SPSM-6:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.01564 0.000135 Inf  0.015322   0.01597
+ beta  0.00335 0.000135 Inf  0.003024   0.00367
+ gamma 0.01715 0.000135 Inf  0.016830   0.01747
+
+model = SPSM-7:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.00319 0.000135 Inf  0.002866   0.00351
+ beta  0.00329 0.000135 Inf  0.002973   0.00362
+ gamma 0.02841 0.000135 Inf  0.028086   0.02873
+
+model = SPSM-8:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.00340 0.000135 Inf  0.003081   0.00373
+ beta  0.00651 0.000135 Inf  0.006190   0.00683
+ gamma 0.02463 0.000135 Inf  0.024310   0.02495
+
+model = SPSM-9:
+ bands  lsmean       SE  df asymp.LCL asymp.UCL
+ alpha 0.00617 0.000135 Inf  0.005844   0.00649
+ beta  0.00203 0.000135 Inf  0.001711   0.00236
+ gamma 0.03262 0.000135 Inf  0.032299   0.03294
+
+Results are averaged over the levels of: groups 
+Degrees-of-freedom method: asymptotic 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 3 estimates 
+
+$contrasts
+model = SPSM-1:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta  -0.000117 0.000167 Inf   -0.700 0.7632 
+ alpha - gamma -0.027099 0.000167 Inf -162.197 <.0001 
+ beta - gamma  -0.026982 0.000167 Inf -161.497 <.0001 
+
+model = SPSM-10:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta   0.001979 0.000167 Inf   11.846 <.0001 
+ alpha - gamma -0.000965 0.000167 Inf   -5.778 <.0001 
+ beta - gamma  -0.002945 0.000167 Inf  -17.624 <.0001 
+
+model = SPSM-2:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta   0.021139 0.000167 Inf  126.522 <.0001 
+ alpha - gamma  0.016507 0.000167 Inf   98.797 <.0001 
+ beta - gamma  -0.004632 0.000167 Inf  -27.724 <.0001 
+
+model = SPSM-3:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta   0.002213 0.000167 Inf   13.247 <.0001 
+ alpha - gamma  0.001874 0.000167 Inf   11.215 <.0001 
+ beta - gamma  -0.000339 0.000167 Inf   -2.032 0.1046 
+
+model = SPSM-4:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta   0.016261 0.000167 Inf   97.328 <.0001 
+ alpha - gamma  0.008572 0.000167 Inf   51.303 <.0001 
+ beta - gamma  -0.007690 0.000167 Inf  -46.024 <.0001 
+
+model = SPSM-5:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta   0.013350 0.000167 Inf   79.901 <.0001 
+ alpha - gamma  0.005556 0.000167 Inf   33.252 <.0001 
+ beta - gamma  -0.007794 0.000167 Inf  -46.649 <.0001 
+
+model = SPSM-6:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta   0.012298 0.000167 Inf   73.609 <.0001 
+ alpha - gamma -0.001508 0.000167 Inf   -9.025 <.0001 
+ beta - gamma  -0.013806 0.000167 Inf  -82.634 <.0001 
+
+model = SPSM-7:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta  -0.000107 0.000167 Inf   -0.638 0.7991 
+ alpha - gamma -0.025220 0.000167 Inf -150.950 <.0001 
+ beta - gamma  -0.025114 0.000167 Inf -150.312 <.0001 
+
+model = SPSM-8:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta  -0.003109 0.000167 Inf  -18.605 <.0001 
+ alpha - gamma -0.021229 0.000167 Inf -127.064 <.0001 
+ beta - gamma  -0.018121 0.000167 Inf -108.458 <.0001 
+
+model = SPSM-9:
+ contrast       estimate       SE  df z.ratio  p.value
+ alpha - beta   0.004133 0.000167 Inf   24.737 <.0001 
+ alpha - gamma -0.026455 0.000167 Inf -158.340 <.0001 
+ beta - gamma  -0.030588 0.000167 Inf -183.077 <.0001 
+
+Results are averaged over the levels of: groups 
+Degrees-of-freedom method: asymptotic 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+

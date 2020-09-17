@@ -1,0 +1,53 @@
+sink('ANOVA_spectral_overall.txt')  #write output to text
+
+
+rm(list = ls())  # clear environment
+cat("\014") #clear console
+dev.new() #clear figures
+
+library(lme4)
+library(lmerTest)
+library(lsmeans)
+library(ggplot2)
+library(effects)
+library(gridExtra)
+library(sjPlot)
+#library(readxl)
+
+
+
+# pp <- "/cp_RT_50_classification_bp_topomap/";  #set working directory
+# setwd(pp)
+
+data1 <- read.csv('~/decode_cp_RT_cnn/decode_spectral_spatial_RT_50/ANOVA_spectral_saliency/Overall_Spectral_Saliency.csv')
+newSal <- aggregate(saliency~subs*bands*groups, FUN=mean,data=data1)  #collapse each subject
+
+
+# #Mixed-model ANOVA-----------------------------
+lm <- lmer(saliency ~ bands*groups + (1|subs),  data=newSal,REML=FALSE) 
+summary(lm)
+anova(lm)
+# #qqnorm(residuals(lm))
+lsmeans(lm,pairwise ~ bands, adjust="tukey")      # compare bands
+lsmeans(lm,pairwise ~ groups, adjust="tukey")    # compare groups
+lsmeans(lm,pairwise ~ groups|bands, adjust="tukey")
+plot_model(lm, type = "int",terms = c("bands","groups"),axis.title=c("bands","Saliency"),legend.title="RT group",colors = c("red", "ForestGreen","blue"))
+
+sink()
+
+sink('ANOVA_spectral_individual_models.txt')
+
+data2 <- read.csv('~/decode_cp_RT_cnn/decode_spectral_spatial_RT_50/ANOVA_spectral_saliency/Spectral_Saliency_all_SPSMs.csv')
+newSal <- aggregate(saliency~subs*bands*groups*model, FUN=mean,data=data2)  #collapse each subject
+dim(newSal)
+
+lm <- lmer(saliency ~ bands*groups*model + (1|subs),  data=newSal,REML=FALSE) 
+summary(lm)
+anova(lm)
+# #qqnorm(residuals(lm))
+lsmeans(lm,pairwise ~ model, adjust="tukey")      # compare bands
+lsmeans(lm,pairwise ~ groups|model, adjust="tukey")    # compare groups
+lsmeans(lm,pairwise ~ bands|model, adjust="tukey")
+plot_model(lm, type = "int",terms = c("bands","groups", "model"),axis.title=c("bands","Saliency"),legend.title="RT group",colors = c("red", "ForestGreen","blue"))
+sink()
+

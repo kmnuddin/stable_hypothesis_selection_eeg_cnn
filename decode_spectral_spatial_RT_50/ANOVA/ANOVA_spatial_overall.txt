@@ -1,0 +1,1241 @@
+NULL
+[1] 9600    4
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: saliency ~ groups * channels + (1 | subs)
+   Data: newSal
+
+     AIC      BIC   logLik deviance df.resid 
+-69345.2 -67954.3  34866.6 -69733.2     9406 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.7225 -0.5974 -0.0463  0.5342  5.9390 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev.
+ subs     (Intercept) 2.033e-06 0.001426
+ Residual             4.051e-05 0.006364
+Number of obs: 9600, groups:  subs, 50
+
+Fixed effects:
+                          Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)              3.249e-02  9.224e-04  6.685e+03  35.223  < 2e-16 ***
+groupsmed                1.181e-02  1.273e-03  9.550e+03   9.279  < 2e-16 ***
+groupsslow               2.361e-02  1.273e-03  9.550e+03  18.546  < 2e-16 ***
+channels AF4            -3.421e-03  1.273e-03  9.550e+03  -2.687 0.007216 ** 
+channels C1             -1.198e-03  1.273e-03  9.550e+03  -0.941 0.346774    
+channels C2              3.995e-03  1.273e-03  9.550e+03   3.139 0.001703 ** 
+channels C3             -2.171e-02  1.273e-03  9.550e+03 -17.059  < 2e-16 ***
+channels C4             -2.108e-03  1.273e-03  9.550e+03  -1.656 0.097716 .  
+channels C5              8.743e-03  1.273e-03  9.550e+03   6.869 6.89e-12 ***
+channels C6              2.996e-02  1.273e-03  9.550e+03  23.534  < 2e-16 ***
+channels CB1            -4.871e-03  1.273e-03  9.550e+03  -3.827 0.000131 ***
+channels CB2            -1.468e-02  1.273e-03  9.550e+03 -11.529  < 2e-16 ***
+channels CP1             3.120e-04  1.273e-03  9.550e+03   0.245 0.806367    
+channels CP2             8.760e-03  1.273e-03  9.550e+03   6.882 6.27e-12 ***
+channels CP3             2.565e-02  1.273e-03  9.550e+03  20.152  < 2e-16 ***
+channels CP4             6.501e-04  1.273e-03  9.550e+03   0.511 0.609551    
+channels CP5            -2.305e-02  1.273e-03  9.550e+03 -18.107  < 2e-16 ***
+channels CP6             7.223e-03  1.273e-03  9.550e+03   5.675 1.43e-08 ***
+channels CPz            -8.470e-03  1.273e-03  9.550e+03  -6.654 3.01e-11 ***
+channels Cz              4.223e-03  1.273e-03  9.550e+03   3.318 0.000911 ***
+channels F1             -1.333e-02  1.273e-03  9.550e+03 -10.472  < 2e-16 ***
+channels F2             -1.456e-02  1.273e-03  9.550e+03 -11.441  < 2e-16 ***
+channels F3              3.953e-03  1.273e-03  9.550e+03   3.106 0.001904 ** 
+channels F4             -1.203e-02  1.273e-03  9.550e+03  -9.452  < 2e-16 ***
+channels F5              4.370e-03  1.273e-03  9.550e+03   3.433 0.000599 ***
+channels F6              1.880e-02  1.273e-03  9.550e+03  14.772  < 2e-16 ***
+channels F7              4.652e-03  1.273e-03  9.550e+03   3.655 0.000259 ***
+channels F8              1.753e-02  1.273e-03  9.550e+03  13.775  < 2e-16 ***
+channels FC1            -2.038e-02  1.273e-03  9.550e+03 -16.010  < 2e-16 ***
+channels FC2             2.219e-02  1.273e-03  9.550e+03  17.432  < 2e-16 ***
+channels FC3            -5.586e-03  1.273e-03  9.550e+03  -4.388 1.16e-05 ***
+channels FC4             1.513e-02  1.273e-03  9.550e+03  11.883  < 2e-16 ***
+channels FC5            -2.485e-02  1.273e-03  9.550e+03 -19.522  < 2e-16 ***
+channels FC6             3.269e-02  1.273e-03  9.550e+03  25.682  < 2e-16 ***
+channels FCz            -9.416e-04  1.273e-03  9.550e+03  -0.740 0.459495    
+channels Fp1            -5.590e-03  1.273e-03  9.550e+03  -4.392 1.14e-05 ***
+channels Fp2            -1.353e-02  1.273e-03  9.550e+03 -10.625  < 2e-16 ***
+channels Fpz            -1.418e-02  1.273e-03  9.550e+03 -11.140  < 2e-16 ***
+channels FT7             9.259e-03  1.273e-03  9.550e+03   7.274 3.77e-13 ***
+channels FT8            -1.130e-02  1.273e-03  9.550e+03  -8.880  < 2e-16 ***
+channels Fz             -1.198e-02  1.273e-03  9.550e+03  -9.414  < 2e-16 ***
+channels M1              7.285e-03  1.273e-03  9.550e+03   5.723 1.08e-08 ***
+channels M2             -1.088e-02  1.273e-03  9.550e+03  -8.549  < 2e-16 ***
+channels O1              2.011e-03  1.273e-03  9.550e+03   1.580 0.114086    
+channels O2              2.634e-02  1.273e-03  9.550e+03  20.691  < 2e-16 ***
+channels Oz             -3.923e-03  1.273e-03  9.550e+03  -3.082 0.002060 ** 
+channels P1              4.589e-03  1.273e-03  9.550e+03   3.605 0.000314 ***
+channels P2             -3.840e-03  1.273e-03  9.550e+03  -3.016 0.002564 ** 
+channels P3             -2.575e-02  1.273e-03  9.550e+03 -20.232  < 2e-16 ***
+channels P4             -2.050e-02  1.273e-03  9.550e+03 -16.103  < 2e-16 ***
+channels P5             -1.951e-02  1.273e-03  9.550e+03 -15.331  < 2e-16 ***
+channels P6             -1.108e-02  1.273e-03  9.550e+03  -8.707  < 2e-16 ***
+channels P7             -1.777e-02  1.273e-03  9.550e+03 -13.957  < 2e-16 ***
+channels P8              2.581e-02  1.273e-03  9.550e+03  20.281  < 2e-16 ***
+channels PO3             9.016e-03  1.273e-03  9.550e+03   7.083 1.51e-12 ***
+channels PO4             2.317e-03  1.273e-03  9.550e+03   1.820 0.068725 .  
+channels PO5            -5.528e-03  1.273e-03  9.550e+03  -4.343 1.42e-05 ***
+channels PO6             9.496e-04  1.273e-03  9.550e+03   0.746 0.455655    
+channels PO7             4.614e-03  1.273e-03  9.550e+03   3.624 0.000291 ***
+channels PO8            -1.990e-02  1.273e-03  9.550e+03 -15.637  < 2e-16 ***
+channels POz             1.293e-02  1.273e-03  9.550e+03  10.159  < 2e-16 ***
+channels Pz             -1.129e-02  1.273e-03  9.550e+03  -8.872  < 2e-16 ***
+channels T7             -7.522e-03  1.273e-03  9.550e+03  -5.909 3.56e-09 ***
+channels T8              1.912e-02  1.273e-03  9.550e+03  15.019  < 2e-16 ***
+channels TP7            -1.778e-02  1.273e-03  9.550e+03 -13.966  < 2e-16 ***
+channels TP8            -2.891e-03  1.273e-03  9.550e+03  -2.271 0.023145 *  
+groupsmed:channels AF4  -6.155e-03  1.800e-03  9.550e+03  -3.419 0.000631 ***
+groupsslow:channels AF4 -1.365e-02  1.800e-03  9.550e+03  -7.582 3.72e-14 ***
+groupsmed:channels C1   -6.326e-03  1.800e-03  9.550e+03  -3.514 0.000443 ***
+groupsslow:channels C1  -1.699e-02  1.800e-03  9.550e+03  -9.440  < 2e-16 ***
+groupsmed:channels C2   -5.284e-03  1.800e-03  9.550e+03  -2.935 0.003339 ** 
+groupsslow:channels C2  -2.837e-02  1.800e-03  9.550e+03 -15.759  < 2e-16 ***
+groupsmed:channels C3   -1.057e-02  1.800e-03  9.550e+03  -5.872 4.44e-09 ***
+groupsslow:channels C3  -1.937e-02  1.800e-03  9.550e+03 -10.759  < 2e-16 ***
+groupsmed:channels C4   -1.197e-02  1.800e-03  9.550e+03  -6.650 3.10e-11 ***
+groupsslow:channels C4  -2.875e-02  1.800e-03  9.550e+03 -15.969  < 2e-16 ***
+groupsmed:channels C5   -1.339e-03  1.800e-03  9.550e+03  -0.744 0.456818    
+groupsslow:channels C5  -7.630e-03  1.800e-03  9.550e+03  -4.239 2.27e-05 ***
+groupsmed:channels C6   -2.738e-03  1.800e-03  9.550e+03  -1.521 0.128291    
+groupsslow:channels C6  -3.400e-02  1.800e-03  9.550e+03 -18.887  < 2e-16 ***
+groupsmed:channels CB1  -3.692e-03  1.800e-03  9.550e+03  -2.051 0.040290 *  
+groupsslow:channels CB1 -1.413e-02  1.800e-03  9.550e+03  -7.851 4.57e-15 ***
+groupsmed:channels CB2  -8.380e-03  1.800e-03  9.550e+03  -4.655 3.28e-06 ***
+groupsslow:channels CB2 -1.209e-02  1.800e-03  9.550e+03  -6.715 1.99e-11 ***
+groupsmed:channels CP1  -2.020e-03  1.800e-03  9.550e+03  -1.122 0.261833    
+groupsslow:channels CP1 -1.231e-02  1.800e-03  9.550e+03  -6.838 8.54e-12 ***
+groupsmed:channels CP2  -4.032e-03  1.800e-03  9.550e+03  -2.240 0.025129 *  
+groupsslow:channels CP2 -1.199e-02  1.800e-03  9.550e+03  -6.663 2.84e-11 ***
+groupsmed:channels CP3  -1.441e-03  1.800e-03  9.550e+03  -0.801 0.423385    
+groupsslow:channels CP3 -3.196e-02  1.800e-03  9.550e+03 -17.752  < 2e-16 ***
+groupsmed:channels CP4  -1.262e-02  1.800e-03  9.550e+03  -7.010 2.55e-12 ***
+groupsslow:channels CP4 -1.794e-02  1.800e-03  9.550e+03  -9.966  < 2e-16 ***
+groupsmed:channels CP5  -1.038e-02  1.800e-03  9.550e+03  -5.767 8.31e-09 ***
+groupsslow:channels CP5 -9.329e-03  1.800e-03  9.550e+03  -5.183 2.23e-07 ***
+groupsmed:channels CP6  -1.563e-02  1.800e-03  9.550e+03  -8.681  < 2e-16 ***
+groupsslow:channels CP6 -3.159e-02  1.800e-03  9.550e+03 -17.551  < 2e-16 ***
+groupsmed:channels CPz  -1.161e-02  1.800e-03  9.550e+03  -6.450 1.18e-10 ***
+groupsslow:channels CPz -1.955e-02  1.800e-03  9.550e+03 -10.861  < 2e-16 ***
+groupsmed:channels Cz   -1.186e-02  1.800e-03  9.550e+03  -6.588 4.69e-11 ***
+groupsslow:channels Cz  -1.339e-02  1.800e-03  9.550e+03  -7.437 1.12e-13 ***
+groupsmed:channels F1   -7.939e-03  1.800e-03  9.550e+03  -4.410 1.04e-05 ***
+groupsslow:channels F1  -1.538e-02  1.800e-03  9.550e+03  -8.541  < 2e-16 ***
+groupsmed:channels F2   -8.978e-03  1.800e-03  9.550e+03  -4.987 6.23e-07 ***
+groupsslow:channels F2  -1.491e-02  1.800e-03  9.550e+03  -8.281  < 2e-16 ***
+groupsmed:channels F3   -1.006e-02  1.800e-03  9.550e+03  -5.591 2.33e-08 ***
+groupsslow:channels F3  -2.146e-02  1.800e-03  9.550e+03 -11.922  < 2e-16 ***
+groupsmed:channels F4   -1.353e-02  1.800e-03  9.550e+03  -7.516 6.18e-14 ***
+groupsslow:channels F4  -2.278e-02  1.800e-03  9.550e+03 -12.654  < 2e-16 ***
+groupsmed:channels F5   -4.601e-03  1.800e-03  9.550e+03  -2.556 0.010601 *  
+groupsslow:channels F5  -2.483e-02  1.800e-03  9.550e+03 -13.792  < 2e-16 ***
+groupsmed:channels F6   -6.777e-03  1.800e-03  9.550e+03  -3.765 0.000168 ***
+groupsslow:channels F6  -2.929e-02  1.800e-03  9.550e+03 -16.269  < 2e-16 ***
+groupsmed:channels F7   -1.523e-02  1.800e-03  9.550e+03  -8.463  < 2e-16 ***
+groupsslow:channels F7  -1.857e-02  1.800e-03  9.550e+03 -10.318  < 2e-16 ***
+groupsmed:channels F8   -2.912e-03  1.800e-03  9.550e+03  -1.617 0.105831    
+groupsslow:channels F8  -8.531e-03  1.800e-03  9.550e+03  -4.739 2.18e-06 ***
+groupsmed:channels FC1  -1.275e-02  1.800e-03  9.550e+03  -7.083 1.51e-12 ***
+groupsslow:channels FC1 -2.048e-02  1.800e-03  9.550e+03 -11.376  < 2e-16 ***
+groupsmed:channels FC2   4.080e-03  1.800e-03  9.550e+03   2.267 0.023434 *  
+groupsslow:channels FC2 -2.555e-02  1.800e-03  9.550e+03 -14.196  < 2e-16 ***
+groupsmed:channels FC3  -7.734e-03  1.800e-03  9.550e+03  -4.296 1.76e-05 ***
+groupsslow:channels FC3 -1.839e-02  1.800e-03  9.550e+03 -10.214  < 2e-16 ***
+groupsmed:channels FC4  -4.464e-03  1.800e-03  9.550e+03  -2.480 0.013171 *  
+groupsslow:channels FC4 -2.280e-02  1.800e-03  9.550e+03 -12.663  < 2e-16 ***
+groupsmed:channels FC5  -1.210e-02  1.800e-03  9.550e+03  -6.724 1.87e-11 ***
+groupsslow:channels FC5 -1.449e-02  1.800e-03  9.550e+03  -8.050 9.25e-16 ***
+groupsmed:channels FC6   3.355e-04  1.800e-03  9.550e+03   0.186 0.852169    
+groupsslow:channels FC6 -3.921e-02  1.800e-03  9.550e+03 -21.780  < 2e-16 ***
+groupsmed:channels FCz  -1.174e-02  1.800e-03  9.550e+03  -6.524 7.21e-11 ***
+groupsslow:channels FCz -2.058e-02  1.800e-03  9.550e+03 -11.430  < 2e-16 ***
+groupsmed:channels Fp1  -7.041e-03  1.800e-03  9.550e+03  -3.911 9.25e-05 ***
+groupsslow:channels Fp1 -1.706e-02  1.800e-03  9.550e+03  -9.475  < 2e-16 ***
+groupsmed:channels Fp2  -1.027e-02  1.800e-03  9.550e+03  -5.708 1.18e-08 ***
+groupsslow:channels Fp2 -8.908e-03  1.800e-03  9.550e+03  -4.948 7.61e-07 ***
+groupsmed:channels Fpz  -5.129e-03  1.800e-03  9.550e+03  -2.849 0.004389 ** 
+groupsslow:channels Fpz  1.416e-02  1.800e-03  9.550e+03   7.868 3.98e-15 ***
+groupsmed:channels FT7   1.336e-03  1.800e-03  9.550e+03   0.742 0.458069    
+groupsslow:channels FT7 -2.927e-02  1.800e-03  9.550e+03 -16.261  < 2e-16 ***
+groupsmed:channels FT8  -6.429e-03  1.800e-03  9.550e+03  -3.572 0.000357 ***
+groupsslow:channels FT8 -1.453e-02  1.800e-03  9.550e+03  -8.074 7.63e-16 ***
+groupsmed:channels Fz   -4.701e-03  1.800e-03  9.550e+03  -2.612 0.009022 ** 
+groupsslow:channels Fz  -4.078e-03  1.800e-03  9.550e+03  -2.265 0.023509 *  
+groupsmed:channels M1   -4.765e-03  1.800e-03  9.550e+03  -2.647 0.008137 ** 
+groupsslow:channels M1  -2.313e-02  1.800e-03  9.550e+03 -12.847  < 2e-16 ***
+groupsmed:channels M2   -6.560e-03  1.800e-03  9.550e+03  -3.644 0.000270 ***
+groupsslow:channels M2   2.213e-03  1.800e-03  9.550e+03   1.229 0.218930    
+groupsmed:channels O1   -2.905e-03  1.800e-03  9.550e+03  -1.614 0.106618    
+groupsslow:channels O1  -1.251e-02  1.800e-03  9.550e+03  -6.950 3.90e-12 ***
+groupsmed:channels O2   -1.361e-03  1.800e-03  9.550e+03  -0.756 0.449651    
+groupsslow:channels O2  -2.321e-02  1.800e-03  9.550e+03 -12.893  < 2e-16 ***
+groupsmed:channels Oz   -4.275e-03  1.800e-03  9.550e+03  -2.375 0.017569 *  
+groupsslow:channels Oz  -1.368e-02  1.800e-03  9.550e+03  -7.602 3.19e-14 ***
+groupsmed:channels P1   -5.594e-04  1.800e-03  9.550e+03  -0.311 0.756000    
+groupsslow:channels P1  -7.315e-03  1.800e-03  9.550e+03  -4.063 4.87e-05 ***
+groupsmed:channels P2   -1.266e-02  1.800e-03  9.550e+03  -7.034 2.15e-12 ***
+groupsslow:channels P2   6.977e-03  1.800e-03  9.550e+03   3.876 0.000107 ***
+groupsmed:channels P3   -1.074e-02  1.800e-03  9.550e+03  -5.966 2.52e-09 ***
+groupsslow:channels P3  -1.789e-02  1.800e-03  9.550e+03  -9.938  < 2e-16 ***
+groupsmed:channels P4   -7.986e-03  1.800e-03  9.550e+03  -4.436 9.25e-06 ***
+groupsslow:channels P4   2.170e-03  1.800e-03  9.550e+03   1.205 0.228144    
+groupsmed:channels P5   -7.902e-03  1.800e-03  9.550e+03  -4.390 1.15e-05 ***
+groupsslow:channels P5  -4.900e-03  1.800e-03  9.550e+03  -2.722 0.006504 ** 
+groupsmed:channels P6   -1.061e-02  1.800e-03  9.550e+03  -5.895 3.88e-09 ***
+groupsslow:channels P6  -2.509e-02  1.800e-03  9.550e+03 -13.939  < 2e-16 ***
+groupsmed:channels P7   -1.539e-02  1.800e-03  9.550e+03  -8.549  < 2e-16 ***
+groupsslow:channels P7  -3.372e-02  1.800e-03  9.550e+03 -18.731  < 2e-16 ***
+ [ reached getOption("max.print") -- omitted 26 rows ]
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Type III Analysis of Variance Table with Satterthwaite's method
+                 Sum Sq  Mean Sq NumDF DenDF F value    Pr(>F)    
+groups          0.06550 0.032750     2  9550 808.523 < 2.2e-16 ***
+channels        1.88891 0.029983    63  9550 740.205 < 2.2e-16 ***
+groups:channels 0.26929 0.002137   126  9550  52.764 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+$lsmeans
+ channels lsmean       SE  df asymp.LCL asymp.UCL
+  AF3     0.0443 0.000557 Inf   0.04243    0.0462
+  AF4     0.0343 0.000557 Inf   0.03240    0.0361
+  C1      0.0353 0.000557 Inf   0.03346    0.0372
+  C2      0.0371 0.000557 Inf   0.03520    0.0389
+  C3      0.0126 0.000557 Inf   0.01073    0.0145
+  C4      0.0286 0.000557 Inf   0.02675    0.0305
+  C5      0.0500 0.000557 Inf   0.04818    0.0519
+  C6      0.0620 0.000557 Inf   0.06014    0.0639
+  CB1     0.0335 0.000557 Inf   0.03161    0.0354
+  CB2     0.0228 0.000557 Inf   0.02093    0.0247
+  CP1     0.0398 0.000557 Inf   0.03796    0.0417
+  CP2     0.0477 0.000557 Inf   0.04584    0.0496
+  CP3     0.0588 0.000557 Inf   0.05695    0.0607
+  CP4     0.0348 0.000557 Inf   0.03289    0.0366
+  CP5     0.0147 0.000557 Inf   0.01281    0.0165
+  CP6     0.0358 0.000557 Inf   0.03391    0.0376
+  CPz     0.0254 0.000557 Inf   0.02357    0.0273
+  Cz      0.0401 0.000557 Inf   0.03823    0.0420
+  F1      0.0232 0.000557 Inf   0.02132    0.0251
+  F2      0.0218 0.000557 Inf   0.01990    0.0236
+  F3      0.0377 0.000557 Inf   0.03587    0.0396
+  F4      0.0202 0.000557 Inf   0.01829    0.0220
+  F5      0.0389 0.000557 Inf   0.03699    0.0407
+  F6      0.0511 0.000557 Inf   0.04921    0.0529
+  F7      0.0377 0.000557 Inf   0.03581    0.0395
+  F8      0.0580 0.000557 Inf   0.05615    0.0599
+  FC1     0.0128 0.000557 Inf   0.01097    0.0147
+  FC2     0.0593 0.000557 Inf   0.05746    0.0612
+  FC3     0.0300 0.000557 Inf   0.02813    0.0319
+  FC4     0.0503 0.000557 Inf   0.04846    0.0522
+  FC5     0.0106 0.000557 Inf   0.00871    0.0124
+  FC6     0.0640 0.000557 Inf   0.06216    0.0659
+  FCz     0.0326 0.000557 Inf   0.03071    0.0344
+  Fp1     0.0307 0.000557 Inf   0.02880    0.0325
+  Fp2     0.0244 0.000557 Inf   0.02251    0.0262
+  Fpz     0.0331 0.000557 Inf   0.03126    0.0350
+  FT7     0.0442 0.000557 Inf   0.04237    0.0461
+  FT8     0.0260 0.000557 Inf   0.02413    0.0279
+  Fz      0.0294 0.000557 Inf   0.02752    0.0313
+  M1      0.0423 0.000557 Inf   0.04041    0.0442
+  M2      0.0320 0.000557 Inf   0.03010    0.0338
+  O1      0.0412 0.000557 Inf   0.03930    0.0430
+  O2      0.0624 0.000557 Inf   0.06057    0.0643
+  Oz      0.0344 0.000557 Inf   0.03252    0.0363
+  P1      0.0463 0.000557 Inf   0.04439    0.0481
+  P2      0.0386 0.000557 Inf   0.03669    0.0404
+  P3      0.0090 0.000557 Inf   0.00713    0.0109
+  P4      0.0219 0.000557 Inf   0.01999    0.0237
+  P5      0.0205 0.000557 Inf   0.01864    0.0224
+  P6      0.0213 0.000557 Inf   0.01944    0.0232
+  P7      0.0102 0.000557 Inf   0.00829    0.0120
+  P8      0.0616 0.000557 Inf   0.05970    0.0634
+  PO3     0.0459 0.000557 Inf   0.04407    0.0478
+  PO4     0.0302 0.000557 Inf   0.02838    0.0321
+  PO5     0.0330 0.000557 Inf   0.03112    0.0349
+  PO6     0.0320 0.000557 Inf   0.03016    0.0339
+  PO7     0.0341 0.000557 Inf   0.03220    0.0359
+  PO8     0.0143 0.000557 Inf   0.01246    0.0162
+  POz     0.0488 0.000557 Inf   0.04692    0.0507
+  Pz      0.0257 0.000557 Inf   0.02387    0.0276
+  T7      0.0292 0.000557 Inf   0.02734    0.0311
+  T8      0.0547 0.000557 Inf   0.05283    0.0566
+  TP7     0.0191 0.000557 Inf   0.01725    0.0210
+  TP8     0.0357 0.000557 Inf   0.03382    0.0376
+
+Results are averaged over the levels of: groups 
+Degrees-of-freedom method: asymptotic 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 64 estimates 
+
+$contrasts
+ contrast     estimate       SE  df z.ratio p.value
+  AF3 -  AF4  1.00e-02 0.000735 Inf  13.637 <.0001 
+  AF3 -  C1   8.97e-03 0.000735 Inf  12.207 <.0001 
+  AF3 -  C2   7.22e-03 0.000735 Inf   9.828 <.0001 
+  AF3 -  C3   3.17e-02 0.000735 Inf  43.127 <.0001 
+  AF3 -  C4   1.57e-02 0.000735 Inf  21.337 <.0001 
+  AF3 -  C5  -5.75e-03 0.000735 Inf  -7.828 <.0001 
+  AF3 -  C6  -1.77e-02 0.000735 Inf -24.099 <.0001 
+  AF3 -  CB1  1.08e-02 0.000735 Inf  14.713 <.0001 
+  AF3 -  CB2  2.15e-02 0.000735 Inf  29.253 <.0001 
+  AF3 -  CP1  4.46e-03 0.000735 Inf   6.075 <.0001 
+  AF3 -  CP2 -3.42e-03 0.000735 Inf  -4.651 0.0053 
+  AF3 -  CP3 -1.45e-02 0.000735 Inf -19.757 <.0001 
+  AF3 -  CP4  9.54e-03 0.000735 Inf  12.976 <.0001 
+  AF3 -  CP5  2.96e-02 0.000735 Inf  40.303 <.0001 
+  AF3 -  CP6  8.52e-03 0.000735 Inf  11.589 <.0001 
+  AF3 -  CPz  1.89e-02 0.000735 Inf  25.659 <.0001 
+  AF3 -  Cz   4.19e-03 0.000735 Inf   5.705 <.0001 
+  AF3 -  F1   2.11e-02 0.000735 Inf  28.713 <.0001 
+  AF3 -  F2   2.25e-02 0.000735 Inf  30.651 <.0001 
+  AF3 -  F3   6.55e-03 0.000735 Inf   8.919 <.0001 
+  AF3 -  F4   2.41e-02 0.000735 Inf  32.840 <.0001 
+  AF3 -  F5   5.44e-03 0.000735 Inf   7.401 <.0001 
+  AF3 -  F6  -6.78e-03 0.000735 Inf  -9.229 <.0001 
+  AF3 -  F7   6.62e-03 0.000735 Inf   9.004 <.0001 
+  AF3 -  F8  -1.37e-02 0.000735 Inf -18.668 <.0001 
+  AF3 -  FC1  3.15e-02 0.000735 Inf  42.802 <.0001 
+  AF3 -  FC2 -1.50e-02 0.000735 Inf -20.454 <.0001 
+  AF3 -  FC3  1.43e-02 0.000735 Inf  19.448 <.0001 
+  AF3 -  FC4 -6.04e-03 0.000735 Inf  -8.217 <.0001 
+  AF3 -  FC5  3.37e-02 0.000735 Inf  45.877 <.0001 
+  AF3 -  FC6 -1.97e-02 0.000735 Inf -26.851 <.0001 
+  AF3 -  FCz  1.17e-02 0.000735 Inf  15.940 <.0001 
+  AF3 -  Fp1  1.36e-02 0.000735 Inf  18.536 <.0001 
+  AF3 -  Fp2  1.99e-02 0.000735 Inf  27.105 <.0001 
+  AF3 -  Fpz  1.12e-02 0.000735 Inf  15.197 <.0001 
+  AF3 -  FT7  5.35e-05 0.000735 Inf   0.073 1.0000 
+  AF3 -  FT8  1.83e-02 0.000735 Inf  24.889 <.0001 
+  AF3 -  Fz   1.49e-02 0.000735 Inf  20.288 <.0001 
+  AF3 -  M1   2.01e-03 0.000735 Inf   2.737 0.9139 
+  AF3 -  M2   1.23e-02 0.000735 Inf  16.778 <.0001 
+  AF3 -  O1   3.13e-03 0.000735 Inf   4.255 0.0284 
+  AF3 -  O2  -1.81e-02 0.000735 Inf -24.694 <.0001 
+  AF3 -  Oz   9.91e-03 0.000735 Inf  13.485 <.0001 
+  AF3 -  P1  -1.96e-03 0.000735 Inf  -2.673 0.9390 
+  AF3 -  P2   5.73e-03 0.000735 Inf   7.803 <.0001 
+  AF3 -  P3   3.53e-02 0.000735 Inf  48.029 <.0001 
+  AF3 -  P4   2.24e-02 0.000735 Inf  30.530 <.0001 
+  AF3 -  P5   2.38e-02 0.000735 Inf  32.360 <.0001 
+  AF3 -  P6   2.30e-02 0.000735 Inf  31.276 <.0001 
+  AF3 -  P7   3.41e-02 0.000735 Inf  46.448 <.0001 
+  AF3 -  P8  -1.73e-02 0.000735 Inf -23.510 <.0001 
+  AF3 -  PO3 -1.64e-03 0.000735 Inf  -2.235 0.9982 
+  AF3 -  PO4  1.40e-02 0.000735 Inf  19.115 <.0001 
+  AF3 -  PO5  1.13e-02 0.000735 Inf  15.386 <.0001 
+  AF3 -  PO6  1.23e-02 0.000735 Inf  16.690 <.0001 
+  AF3 -  PO7  1.02e-02 0.000735 Inf  13.914 <.0001 
+  AF3 -  PO8  3.00e-02 0.000735 Inf  40.782 <.0001 
+  AF3 -  POz -4.49e-03 0.000735 Inf  -6.108 <.0001 
+  AF3 -  Pz   1.86e-02 0.000735 Inf  25.245 <.0001 
+  AF3 -  T7   1.51e-02 0.000735 Inf  20.531 <.0001 
+  AF3 -  T8  -1.04e-02 0.000735 Inf -14.152 <.0001 
+  AF3 -  TP7  2.52e-02 0.000735 Inf  34.260 <.0001 
+  AF3 -  TP8  8.61e-03 0.000735 Inf  11.714 <.0001 
+  AF4 -  C1  -1.05e-03 0.000735 Inf  -1.430 1.0000 
+  AF4 -  C2  -2.80e-03 0.000735 Inf  -3.809 0.1358 
+  AF4 -  C3   2.17e-02 0.000735 Inf  29.490 <.0001 
+  AF4 -  C4   5.66e-03 0.000735 Inf   7.700 <.0001 
+  AF4 -  C5  -1.58e-02 0.000735 Inf -21.465 <.0001 
+  AF4 -  C6  -2.77e-02 0.000735 Inf -37.736 <.0001 
+  AF4 -  CB1  7.91e-04 0.000735 Inf   1.077 1.0000 
+  AF4 -  CB2  1.15e-02 0.000735 Inf  15.616 <.0001 
+  AF4 -  CP1 -5.56e-03 0.000735 Inf  -7.562 <.0001 
+  AF4 -  CP2 -1.34e-02 0.000735 Inf -18.288 <.0001 
+  AF4 -  CP3 -2.45e-02 0.000735 Inf -33.394 <.0001 
+  AF4 -  CP4 -4.85e-04 0.000735 Inf  -0.661 1.0000 
+  AF4 -  CP5  1.96e-02 0.000735 Inf  26.666 <.0001 
+  AF4 -  CP6 -1.50e-03 0.000735 Inf  -2.048 0.9998 
+  AF4 -  CPz  8.84e-03 0.000735 Inf  12.022 <.0001 
+  AF4 -  Cz  -5.83e-03 0.000735 Inf  -7.931 <.0001 
+  AF4 -  F1   1.11e-02 0.000735 Inf  15.076 <.0001 
+  AF4 -  F2   1.25e-02 0.000735 Inf  17.014 <.0001 
+  AF4 -  F3  -3.47e-03 0.000735 Inf  -4.717 0.0039 
+  AF4 -  F4   1.41e-02 0.000735 Inf  19.203 <.0001 
+  AF4 -  F5  -4.58e-03 0.000735 Inf  -6.236 <.0001 
+  AF4 -  F6  -1.68e-02 0.000735 Inf -22.865 <.0001 
+  AF4 -  F7  -3.40e-03 0.000735 Inf  -4.633 0.0058 
+  AF4 -  F8  -2.37e-02 0.000735 Inf -32.305 <.0001 
+  AF4 -  FC1  2.14e-02 0.000735 Inf  29.166 <.0001 
+  AF4 -  FC2 -2.51e-02 0.000735 Inf -34.090 <.0001 
+  AF4 -  FC3  4.27e-03 0.000735 Inf   5.812 <.0001 
+  AF4 -  FC4 -1.61e-02 0.000735 Inf -21.854 <.0001 
+  AF4 -  FC5  2.37e-02 0.000735 Inf  32.240 <.0001 
+  AF4 -  FC6 -2.98e-02 0.000735 Inf -40.488 <.0001 
+  AF4 -  FCz  1.69e-03 0.000735 Inf   2.304 0.9963 
+  AF4 -  Fp1  3.60e-03 0.000735 Inf   4.899 0.0017 
+  AF4 -  Fp2  9.90e-03 0.000735 Inf  13.468 <.0001 
+  AF4 -  Fpz  1.15e-03 0.000735 Inf   1.560 1.0000 
+  AF4 -  FT7 -9.97e-03 0.000735 Inf -13.564 <.0001 
+  AF4 -  FT8  8.27e-03 0.000735 Inf  11.253 <.0001 
+  AF4 -  Fz   4.89e-03 0.000735 Inf   6.652 <.0001 
+  AF4 -  M1  -8.01e-03 0.000735 Inf -10.899 <.0001 
+  AF4 -  M2   2.31e-03 0.000735 Inf   3.141 0.6275 
+  AF4 -  O1  -6.89e-03 0.000735 Inf  -9.382 <.0001 
+  AF4 -  O2  -2.82e-02 0.000735 Inf -38.331 <.0001 
+  AF4 -  Oz  -1.12e-04 0.000735 Inf  -0.152 1.0000 
+  AF4 -  P1  -1.20e-02 0.000735 Inf -16.310 <.0001 
+  AF4 -  P2  -4.29e-03 0.000735 Inf  -5.834 <.0001 
+  AF4 -  P3   2.53e-02 0.000735 Inf  34.392 <.0001 
+  AF4 -  P4   1.24e-02 0.000735 Inf  16.893 <.0001 
+  AF4 -  P5   1.38e-02 0.000735 Inf  18.724 <.0001 
+  AF4 -  P6   1.30e-02 0.000735 Inf  17.639 <.0001 
+  AF4 -  P7   2.41e-02 0.000735 Inf  32.812 <.0001 
+  AF4 -  P8  -2.73e-02 0.000735 Inf -37.146 <.0001 
+  AF4 -  PO3 -1.17e-02 0.000735 Inf -15.872 <.0001 
+  AF4 -  PO4  4.03e-03 0.000735 Inf   5.478 0.0001 
+  AF4 -  PO5  1.29e-03 0.000735 Inf   1.749 1.0000 
+  AF4 -  PO6  2.24e-03 0.000735 Inf   3.053 0.7047 
+  AF4 -  PO7  2.04e-04 0.000735 Inf   0.277 1.0000 
+  AF4 -  PO8  1.99e-02 0.000735 Inf  27.145 <.0001 
+  AF4 -  POz -1.45e-02 0.000735 Inf -19.745 <.0001 
+  AF4 -  Pz   8.53e-03 0.000735 Inf  11.608 <.0001 
+  AF4 -  T7   5.07e-03 0.000735 Inf   6.894 <.0001 
+  AF4 -  T8  -2.04e-02 0.000735 Inf -27.789 <.0001 
+  AF4 -  TP7  1.52e-02 0.000735 Inf  20.623 <.0001 
+  AF4 -  TP8 -1.41e-03 0.000735 Inf  -1.923 1.0000 
+  C1 -  C2   -1.75e-03 0.000735 Inf  -2.379 0.9926 
+  C1 -  C3    2.27e-02 0.000735 Inf  30.920 <.0001 
+  C1 -  C4    6.71e-03 0.000735 Inf   9.130 <.0001 
+  C1 -  C5   -1.47e-02 0.000735 Inf -20.035 <.0001 
+  C1 -  C6   -2.67e-02 0.000735 Inf -36.305 <.0001 
+  C1 -  CB1   1.84e-03 0.000735 Inf   2.507 0.9791 
+  C1 -  CB2   1.25e-02 0.000735 Inf  17.046 <.0001 
+  C1 -  CP1  -4.51e-03 0.000735 Inf  -6.132 <.0001 
+  C1 -  CP2  -1.24e-02 0.000735 Inf -16.858 <.0001 
+  C1 -  CP3  -2.35e-02 0.000735 Inf -31.964 <.0001 
+  C1 -  CP4   5.66e-04 0.000735 Inf   0.770 1.0000 
+  C1 -  CP5   2.06e-02 0.000735 Inf  28.096 <.0001 
+  C1 -  CP6  -4.54e-04 0.000735 Inf  -0.617 1.0000 
+  C1 -  CPz   9.89e-03 0.000735 Inf  13.452 <.0001 
+  C1 -  Cz   -4.78e-03 0.000735 Inf  -6.501 <.0001 
+  C1 -  F1    1.21e-02 0.000735 Inf  16.507 <.0001 
+  C1 -  F2    1.36e-02 0.000735 Inf  18.444 <.0001 
+  C1 -  F3   -2.42e-03 0.000735 Inf  -3.287 0.4944 
+  C1 -  F4    1.52e-02 0.000735 Inf  20.633 <.0001 
+  C1 -  F5   -3.53e-03 0.000735 Inf  -4.805 0.0026 
+  C1 -  F6   -1.58e-02 0.000735 Inf -21.435 <.0001 
+  C1 -  F7   -2.35e-03 0.000735 Inf  -3.203 0.5714 
+  C1 -  F8   -2.27e-02 0.000735 Inf -30.875 <.0001 
+  C1 -  FC1   2.25e-02 0.000735 Inf  30.596 <.0001 
+  C1 -  FC2  -2.40e-02 0.000735 Inf -32.660 <.0001 
+  C1 -  FC3   5.32e-03 0.000735 Inf   7.242 <.0001 
+  C1 -  FC4  -1.50e-02 0.000735 Inf -20.424 <.0001 
+  C1 -  FC5   2.47e-02 0.000735 Inf  33.670 <.0001 
+  C1 -  FC6  -2.87e-02 0.000735 Inf -39.058 <.0001 
+  C1 -  FCz   2.74e-03 0.000735 Inf   3.734 0.1702 
+  C1 -  Fp1   4.65e-03 0.000735 Inf   6.330 <.0001 
+  C1 -  Fp2   1.09e-02 0.000735 Inf  14.898 <.0001 
+  C1 -  Fpz   2.20e-03 0.000735 Inf   2.990 0.7567 
+  C1 -  FT7  -8.92e-03 0.000735 Inf -12.134 <.0001 
+  C1 -  FT8   9.32e-03 0.000735 Inf  12.683 <.0001 
+  C1 -  Fz    5.94e-03 0.000735 Inf   8.082 <.0001 
+  C1 -  M1   -6.96e-03 0.000735 Inf  -9.469 <.0001 
+  C1 -  M2    3.36e-03 0.000735 Inf   4.571 0.0076 
+  C1 -  O1   -5.84e-03 0.000735 Inf  -7.952 <.0001 
+  C1 -  O2   -2.71e-02 0.000735 Inf -36.901 <.0001 
+  C1 -  Oz    9.39e-04 0.000735 Inf   1.278 1.0000 
+ [ reached getOption("max.print") -- omitted 1850 rows ]
+
+Results are averaged over the levels of: groups 
+Degrees-of-freedom method: asymptotic 
+P value adjustment: tukey method for comparing a family of 64 estimates 
+
+$lsmeans
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.0314 0.000231 Inf    0.0308    0.0319
+ med    0.0361 0.000231 Inf    0.0356    0.0367
+ slow   0.0374 0.000231 Inf    0.0369    0.0380
+
+Results are averaged over the levels of: channels 
+Degrees-of-freedom method: asymptotic 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 3 estimates 
+
+$contrasts
+ contrast    estimate       SE  df z.ratio p.value
+ fast - med  -0.00478 0.000159 Inf -30.016 <.0001 
+ fast - slow -0.00608 0.000159 Inf -38.183 <.0001 
+ med - slow  -0.00130 0.000159 Inf  -8.167 <.0001 
+
+Results are averaged over the levels of: channels 
+Degrees-of-freedom method: asymptotic 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+$lsmeans
+channels =  AF3:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03249 0.000922 Inf   0.03029   0.03469
+ med    0.04430 0.000922 Inf   0.04210   0.04650
+ slow   0.05610 0.000922 Inf   0.05389   0.05830
+
+channels =  AF4:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02907 0.000922 Inf   0.02687   0.03127
+ med    0.03472 0.000922 Inf   0.03252   0.03693
+ slow   0.03903 0.000922 Inf   0.03682   0.04123
+
+channels =  C1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03129 0.000922 Inf   0.02909   0.03349
+ med    0.03678 0.000922 Inf   0.03457   0.03898
+ slow   0.03790 0.000922 Inf   0.03570   0.04011
+
+channels =  C2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03648 0.000922 Inf   0.03428   0.03869
+ med    0.04301 0.000922 Inf   0.04081   0.04521
+ slow   0.03172 0.000922 Inf   0.02952   0.03392
+
+channels =  C3:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01077 0.000922 Inf   0.00857   0.01298
+ med    0.01201 0.000922 Inf   0.00981   0.01422
+ slow   0.01501 0.000922 Inf   0.01281   0.01722
+
+channels =  C4:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03038 0.000922 Inf   0.02818   0.03258
+ med    0.03022 0.000922 Inf   0.02802   0.03242
+ slow   0.02524 0.000922 Inf   0.02304   0.02744
+
+channels =  C5:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.04123 0.000922 Inf   0.03903   0.04343
+ med    0.05170 0.000922 Inf   0.04950   0.05391
+ slow   0.05721 0.000922 Inf   0.05501   0.05941
+
+channels =  C6:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.06244 0.000922 Inf   0.06024   0.06465
+ med    0.07152 0.000922 Inf   0.06932   0.07372
+ slow   0.05205 0.000922 Inf   0.04985   0.05425
+
+channels =  CB1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02762 0.000922 Inf   0.02542   0.02982
+ med    0.03574 0.000922 Inf   0.03353   0.03794
+ slow   0.03709 0.000922 Inf   0.03489   0.03929
+
+channels =  CB2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01781 0.000922 Inf   0.01561   0.02002
+ med    0.02124 0.000922 Inf   0.01904   0.02345
+ slow   0.02933 0.000922 Inf   0.02713   0.03153
+
+channels =  CP1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03280 0.000922 Inf   0.03060   0.03500
+ med    0.04259 0.000922 Inf   0.04039   0.04479
+ slow   0.04410 0.000922 Inf   0.04190   0.04630
+
+channels =  CP2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.04125 0.000922 Inf   0.03905   0.04345
+ med    0.04903 0.000922 Inf   0.04683   0.05123
+ slow   0.05286 0.000922 Inf   0.05066   0.05506
+
+channels =  CP3:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.05814 0.000922 Inf   0.05594   0.06034
+ med    0.06851 0.000922 Inf   0.06631   0.07071
+ slow   0.04979 0.000922 Inf   0.04759   0.05199
+
+channels =  CP4:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03314 0.000922 Inf   0.03094   0.03534
+ med    0.03233 0.000922 Inf   0.03013   0.03453
+ slow   0.03881 0.000922 Inf   0.03660   0.04101
+
+channels =  CP5:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.00944 0.000922 Inf   0.00724   0.01164
+ med    0.01087 0.000922 Inf   0.00867   0.01307
+ slow   0.02372 0.000922 Inf   0.02152   0.02592
+
+channels =  CP6:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03971 0.000922 Inf   0.03751   0.04191
+ med    0.03590 0.000922 Inf   0.03369   0.03810
+ slow   0.03173 0.000922 Inf   0.02952   0.03393
+
+channels =  CPz:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02402 0.000922 Inf   0.02182   0.02622
+ med    0.02422 0.000922 Inf   0.02202   0.02642
+ slow   0.02807 0.000922 Inf   0.02587   0.03028
+
+channels =  Cz:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03671 0.000922 Inf   0.03451   0.03891
+ med    0.03666 0.000922 Inf   0.03446   0.03887
+ slow   0.04693 0.000922 Inf   0.04473   0.04913
+
+channels =  F1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01916 0.000922 Inf   0.01696   0.02136
+ med    0.02303 0.000922 Inf   0.02083   0.02523
+ slow   0.02739 0.000922 Inf   0.02519   0.02959
+
+channels =  F2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01793 0.000922 Inf   0.01572   0.02013
+ med    0.02076 0.000922 Inf   0.01856   0.02296
+ slow   0.02662 0.000922 Inf   0.02442   0.02883
+
+channels =  F3:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03644 0.000922 Inf   0.03424   0.03864
+ med    0.03819 0.000922 Inf   0.03599   0.04039
+ slow   0.03859 0.000922 Inf   0.03639   0.04079
+
+channels =  F4:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02046 0.000922 Inf   0.01825   0.02266
+ med    0.01874 0.000922 Inf   0.01654   0.02094
+ slow   0.02128 0.000922 Inf   0.01908   0.02349
+
+channels =  F5:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03686 0.000922 Inf   0.03466   0.03906
+ med    0.04407 0.000922 Inf   0.04187   0.04627
+ slow   0.03564 0.000922 Inf   0.03344   0.03784
+
+channels =  F6:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.05129 0.000922 Inf   0.04909   0.05349
+ med    0.05633 0.000922 Inf   0.05412   0.05853
+ slow   0.04561 0.000922 Inf   0.04341   0.04782
+
+channels =  F7:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03714 0.000922 Inf   0.03494   0.03934
+ med    0.03372 0.000922 Inf   0.03152   0.03592
+ slow   0.04217 0.000922 Inf   0.03997   0.04438
+
+channels =  F8:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.05002 0.000922 Inf   0.04782   0.05222
+ med    0.05892 0.000922 Inf   0.05672   0.06112
+ slow   0.06510 0.000922 Inf   0.06290   0.06730
+
+channels =  FC1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01211 0.000922 Inf   0.00991   0.01431
+ med    0.01117 0.000922 Inf   0.00897   0.01337
+ slow   0.01524 0.000922 Inf   0.01304   0.01744
+
+channels =  FC2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.05468 0.000922 Inf   0.05248   0.05688
+ med    0.07057 0.000922 Inf   0.06837   0.07277
+ slow   0.05273 0.000922 Inf   0.05053   0.05493
+
+channels =  FC3:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02690 0.000922 Inf   0.02470   0.02911
+ med    0.03098 0.000922 Inf   0.02878   0.03318
+ slow   0.03212 0.000922 Inf   0.02992   0.03433
+
+channels =  FC4:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.04761 0.000922 Inf   0.04541   0.04982
+ med    0.05496 0.000922 Inf   0.05276   0.05716
+ slow   0.04843 0.000922 Inf   0.04622   0.05063
+
+channels =  FC5:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.00764 0.000922 Inf   0.00544   0.00984
+ med    0.00735 0.000922 Inf   0.00514   0.00955
+ slow   0.01675 0.000922 Inf   0.01455   0.01896
+
+channels =  FC6:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.06518 0.000922 Inf   0.06298   0.06738
+ med    0.07733 0.000922 Inf   0.07512   0.07953
+ slow   0.04958 0.000922 Inf   0.04738   0.05178
+
+channels =  FCz:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03155 0.000922 Inf   0.02934   0.03375
+ med    0.03161 0.000922 Inf   0.02941   0.03382
+ slow   0.03458 0.000922 Inf   0.03238   0.03678
+
+channels =  Fp1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02690 0.000922 Inf   0.02470   0.02910
+ med    0.03167 0.000922 Inf   0.02947   0.03387
+ slow   0.03345 0.000922 Inf   0.03125   0.03565
+
+channels =  Fp2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01896 0.000922 Inf   0.01676   0.02117
+ med    0.02050 0.000922 Inf   0.01830   0.02270
+ slow   0.03366 0.000922 Inf   0.03146   0.03586
+
+channels =  Fpz:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01831 0.000922 Inf   0.01611   0.02051
+ med    0.02499 0.000922 Inf   0.02279   0.02719
+ slow   0.05608 0.000922 Inf   0.05388   0.05828
+
+channels =  FT7:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.04175 0.000922 Inf   0.03955   0.04395
+ med    0.05489 0.000922 Inf   0.05269   0.05710
+ slow   0.03608 0.000922 Inf   0.03388   0.03828
+
+channels =  FT8:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02119 0.000922 Inf   0.01898   0.02339
+ med    0.02657 0.000922 Inf   0.02436   0.02877
+ slow   0.03026 0.000922 Inf   0.02806   0.03246
+
+channels =  Fz:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02051 0.000922 Inf   0.01830   0.02271
+ med    0.02762 0.000922 Inf   0.02541   0.02982
+ slow   0.04003 0.000922 Inf   0.03783   0.04224
+
+channels =  M1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03977 0.000922 Inf   0.03757   0.04198
+ med    0.04682 0.000922 Inf   0.04462   0.04902
+ slow   0.04025 0.000922 Inf   0.03805   0.04246
+
+channels =  M2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02161 0.000922 Inf   0.01941   0.02381
+ med    0.02686 0.000922 Inf   0.02466   0.02906
+ slow   0.04743 0.000922 Inf   0.04523   0.04963
+
+channels =  O1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03450 0.000922 Inf   0.03230   0.03670
+ med    0.04341 0.000922 Inf   0.04120   0.04561
+ slow   0.04560 0.000922 Inf   0.04339   0.04780
+
+channels =  O2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.05883 0.000922 Inf   0.05662   0.06103
+ med    0.06928 0.000922 Inf   0.06707   0.07148
+ slow   0.05922 0.000922 Inf   0.05702   0.06143
+
+channels =  Oz:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02857 0.000922 Inf   0.02636   0.03077
+ med    0.03610 0.000922 Inf   0.03390   0.03830
+ slow   0.03849 0.000922 Inf   0.03628   0.04069
+
+channels =  P1:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03708 0.000922 Inf   0.03488   0.03928
+ med    0.04833 0.000922 Inf   0.04613   0.05053
+ slow   0.05337 0.000922 Inf   0.05117   0.05557
+
+channels =  P2:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02865 0.000922 Inf   0.02645   0.03085
+ med    0.02780 0.000922 Inf   0.02560   0.03000
+ slow   0.05923 0.000922 Inf   0.05703   0.06143
+
+channels =  P3:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.00674 0.000922 Inf   0.00453   0.00894
+ med    0.00781 0.000922 Inf   0.00560   0.01001
+ slow   0.01245 0.000922 Inf   0.01025   0.01465
+
+channels =  P4:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01199 0.000922 Inf   0.00979   0.01419
+ med    0.01582 0.000922 Inf   0.01361   0.01802
+ slow   0.03777 0.000922 Inf   0.03556   0.03997
+
+channels =  P5:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01297 0.000922 Inf   0.01077   0.01518
+ med    0.01688 0.000922 Inf   0.01468   0.01909
+ slow   0.03168 0.000922 Inf   0.02948   0.03388
+
+channels =  P6:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02141 0.000922 Inf   0.01920   0.02361
+ med    0.02261 0.000922 Inf   0.02040   0.02481
+ slow   0.01992 0.000922 Inf   0.01772   0.02212
+
+channels =  P7:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01472 0.000922 Inf   0.01252   0.01693
+ med    0.01115 0.000922 Inf   0.00894   0.01335
+ slow   0.00461 0.000922 Inf   0.00241   0.00681
+
+channels =  P8:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.05830 0.000922 Inf   0.05610   0.06051
+ med    0.06775 0.000922 Inf   0.06555   0.06995
+ slow   0.05866 0.000922 Inf   0.05646   0.06086
+
+channels =  PO3:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.04150 0.000922 Inf   0.03930   0.04371
+ med    0.04765 0.000922 Inf   0.04545   0.04986
+ slow   0.04865 0.000922 Inf   0.04645   0.05086
+
+channels =  PO4:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03481 0.000922 Inf   0.03260   0.03701
+ med    0.03537 0.000922 Inf   0.03316   0.03757
+ slow   0.02057 0.000922 Inf   0.01837   0.02277
+
+channels =  PO5:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02696 0.000922 Inf   0.02476   0.02916
+ med    0.03395 0.000922 Inf   0.03174   0.03615
+ slow   0.03806 0.000922 Inf   0.03585   0.04026
+
+channels =  PO6:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03344 0.000922 Inf   0.03124   0.03564
+ med    0.03296 0.000922 Inf   0.03075   0.03516
+ slow   0.02969 0.000922 Inf   0.02749   0.03190
+
+channels =  PO7:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.03710 0.000922 Inf   0.03490   0.03930
+ med    0.03322 0.000922 Inf   0.03102   0.03542
+ slow   0.03188 0.000922 Inf   0.02968   0.03409
+
+channels =  PO8:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01258 0.000922 Inf   0.01038   0.01479
+ med    0.01395 0.000922 Inf   0.01175   0.01616
+ slow   0.01644 0.000922 Inf   0.01423   0.01864
+
+channels =  POz:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.04542 0.000922 Inf   0.04322   0.04762
+ med    0.05236 0.000922 Inf   0.05016   0.05456
+ slow   0.04857 0.000922 Inf   0.04637   0.05077
+
+channels =  Pz:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02120 0.000922 Inf   0.01899   0.02340
+ med    0.02647 0.000922 Inf   0.02426   0.02867
+ slow   0.02957 0.000922 Inf   0.02736   0.03177
+
+channels =  T7:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02497 0.000922 Inf   0.02276   0.02717
+ med    0.03295 0.000922 Inf   0.03074   0.03515
+ slow   0.02971 0.000922 Inf   0.02750   0.03191
+
+channels =  T8:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.05161 0.000922 Inf   0.04940   0.05381
+ med    0.06587 0.000922 Inf   0.06366   0.06807
+ slow   0.04661 0.000922 Inf   0.04441   0.04882
+
+channels =  TP7:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.01471 0.000922 Inf   0.01251   0.01691
+ med    0.01618 0.000922 Inf   0.01398   0.01839
+ slow   0.02646 0.000922 Inf   0.02425   0.02866
+
+channels =  TP8:
+ groups  lsmean       SE  df asymp.LCL asymp.UCL
+ fast   0.02960 0.000922 Inf   0.02740   0.03180
+ med    0.03523 0.000922 Inf   0.03302   0.03743
+ slow   0.04224 0.000922 Inf   0.04003   0.04444
+
+Degrees-of-freedom method: asymptotic 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 3 estimates 
+
+$contrasts
+channels =  AF3:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.18e-02 0.00127 Inf  -9.279 <.0001 
+ fast - slow -2.36e-02 0.00127 Inf -18.546 <.0001 
+ med - slow  -1.18e-02 0.00127 Inf  -9.267 <.0001 
+
+channels =  AF4:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -5.66e-03 0.00127 Inf  -4.444 <.0001 
+ fast - slow -9.96e-03 0.00127 Inf  -7.824 <.0001 
+ med - slow  -4.30e-03 0.00127 Inf  -3.380 0.0021 
+
+channels =  C1:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -5.49e-03 0.00127 Inf  -4.309 <.0001 
+ fast - slow -6.61e-03 0.00127 Inf  -5.196 <.0001 
+ med - slow  -1.13e-03 0.00127 Inf  -0.887 0.6487 
+
+channels =  C2:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -6.53e-03 0.00127 Inf  -5.128 <.0001 
+ fast - slow  4.76e-03 0.00127 Inf   3.741 0.0005 
+ med - slow   1.13e-02 0.00127 Inf   8.869 <.0001 
+
+channels =  C3:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.24e-03 0.00127 Inf  -0.974 0.5932 
+ fast - slow -4.24e-03 0.00127 Inf  -3.330 0.0025 
+ med - slow  -3.00e-03 0.00127 Inf  -2.356 0.0485 
+
+channels =  C4:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   1.59e-04 0.00127 Inf   0.125 0.9914 
+ fast - slow  5.14e-03 0.00127 Inf   4.038 0.0002 
+ med - slow   4.98e-03 0.00127 Inf   3.913 0.0003 
+
+channels =  C5:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.05e-02 0.00127 Inf  -8.227 <.0001 
+ fast - slow -1.60e-02 0.00127 Inf -12.552 <.0001 
+ med - slow  -5.50e-03 0.00127 Inf  -4.325 <.0001 
+
+channels =  C6:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -9.07e-03 0.00127 Inf  -7.128 <.0001 
+ fast - slow  1.04e-02 0.00127 Inf   8.164 <.0001 
+ med - slow   1.95e-02 0.00127 Inf  15.292 <.0001 
+
+channels =  CB1:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -8.12e-03 0.00127 Inf  -6.378 <.0001 
+ fast - slow -9.47e-03 0.00127 Inf  -7.443 <.0001 
+ med - slow  -1.35e-03 0.00127 Inf  -1.064 0.5362 
+
+channels =  CB2:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -3.43e-03 0.00127 Inf  -2.695 0.0193 
+ fast - slow -1.15e-02 0.00127 Inf  -9.049 <.0001 
+ med - slow  -8.09e-03 0.00127 Inf  -6.354 <.0001 
+
+channels =  CP1:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -9.79e-03 0.00127 Inf  -7.692 <.0001 
+ fast - slow -1.13e-02 0.00127 Inf  -8.876 <.0001 
+ med - slow  -1.51e-03 0.00127 Inf  -1.184 0.4629 
+
+channels =  CP2:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -7.78e-03 0.00127 Inf  -6.112 <.0001 
+ fast - slow -1.16e-02 0.00127 Inf  -9.124 <.0001 
+ med - slow  -3.83e-03 0.00127 Inf  -3.012 0.0073 
+
+channels =  CP3:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.04e-02 0.00127 Inf  -8.147 <.0001 
+ fast - slow  8.35e-03 0.00127 Inf   6.559 <.0001 
+ med - slow   1.87e-02 0.00127 Inf  14.706 <.0001 
+
+channels =  CP4:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   8.07e-04 0.00127 Inf   0.634 0.8012 
+ fast - slow -5.67e-03 0.00127 Inf  -4.452 <.0001 
+ med - slow  -6.47e-03 0.00127 Inf  -5.086 <.0001 
+
+channels =  CP5:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.43e-03 0.00127 Inf  -1.123 0.4999 
+ fast - slow -1.43e-02 0.00127 Inf -11.217 <.0001 
+ med - slow  -1.28e-02 0.00127 Inf -10.094 <.0001 
+
+channels =  CP6:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   3.82e-03 0.00127 Inf   2.998 0.0077 
+ fast - slow  7.99e-03 0.00127 Inf   6.275 <.0001 
+ med - slow   4.17e-03 0.00127 Inf   3.277 0.0030 
+
+channels =  CPz:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -2.01e-04 0.00127 Inf  -0.158 0.9863 
+ fast - slow -4.06e-03 0.00127 Inf  -3.186 0.0041 
+ med - slow  -3.85e-03 0.00127 Inf  -3.028 0.0069 
+
+channels =  Cz:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   4.84e-05 0.00127 Inf   0.038 0.9992 
+ fast - slow -1.02e-02 0.00127 Inf  -8.028 <.0001 
+ med - slow  -1.03e-02 0.00127 Inf  -8.066 <.0001 
+
+channels =  F1:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -3.87e-03 0.00127 Inf  -3.042 0.0066 
+ fast - slow -8.23e-03 0.00127 Inf  -6.467 <.0001 
+ med - slow  -4.36e-03 0.00127 Inf  -3.424 0.0018 
+
+channels =  F2:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -2.83e-03 0.00127 Inf  -2.226 0.0668 
+ fast - slow -8.70e-03 0.00127 Inf  -6.834 <.0001 
+ med - slow  -5.87e-03 0.00127 Inf  -4.608 <.0001 
+
+channels =  F3:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.75e-03 0.00127 Inf  -1.373 0.3552 
+ fast - slow -2.15e-03 0.00127 Inf  -1.686 0.2104 
+ med - slow  -3.99e-04 0.00127 Inf  -0.313 0.9473 
+
+channels =  F4:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   1.72e-03 0.00127 Inf   1.350 0.3678 
+ fast - slow -8.28e-04 0.00127 Inf  -0.650 0.7923 
+ med - slow  -2.55e-03 0.00127 Inf  -2.000 0.1123 
+
+channels =  F5:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -7.21e-03 0.00127 Inf  -5.664 <.0001 
+ fast - slow  1.22e-03 0.00127 Inf   0.959 0.6030 
+ med - slow   8.43e-03 0.00127 Inf   6.623 <.0001 
+
+channels =  F6:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -5.03e-03 0.00127 Inf  -3.955 0.0002 
+ fast - slow  5.68e-03 0.00127 Inf   4.461 <.0001 
+ med - slow   1.07e-02 0.00127 Inf   8.416 <.0001 
+
+channels =  F7:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   3.42e-03 0.00127 Inf   2.689 0.0196 
+ fast - slow -5.03e-03 0.00127 Inf  -3.955 0.0002 
+ med - slow  -8.46e-03 0.00127 Inf  -6.644 <.0001 
+
+channels =  F8:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -8.90e-03 0.00127 Inf  -6.992 <.0001 
+ fast - slow -1.51e-02 0.00127 Inf -11.843 <.0001 
+ med - slow  -6.18e-03 0.00127 Inf  -4.852 <.0001 
+
+channels =  FC1:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   9.39e-04 0.00127 Inf   0.738 0.7411 
+ fast - slow -3.13e-03 0.00127 Inf  -2.458 0.0372 
+ med - slow  -4.07e-03 0.00127 Inf  -3.196 0.0040 
+
+channels =  FC2:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.59e-02 0.00127 Inf -12.485 <.0001 
+ fast - slow  1.95e-03 0.00127 Inf   1.530 0.2767 
+ med - slow   1.78e-02 0.00127 Inf  14.015 <.0001 
+
+channels =  FC3:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -4.08e-03 0.00127 Inf  -3.203 0.0039 
+ fast - slow -5.22e-03 0.00127 Inf  -4.101 0.0001 
+ med - slow  -1.14e-03 0.00127 Inf  -0.897 0.6420 
+
+channels =  FC4:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -7.35e-03 0.00127 Inf  -5.772 <.0001 
+ fast - slow -8.11e-04 0.00127 Inf  -0.637 0.7995 
+ med - slow   6.54e-03 0.00127 Inf   5.135 <.0001 
+
+channels =  FC5:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   2.93e-04 0.00127 Inf   0.230 0.9712 
+ fast - slow -9.12e-03 0.00127 Inf  -7.161 <.0001 
+ med - slow  -9.41e-03 0.00127 Inf  -7.391 <.0001 
+
+channels =  FC6:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.21e-02 0.00127 Inf  -9.543 <.0001 
+ fast - slow  1.56e-02 0.00127 Inf  12.255 <.0001 
+ med - slow   2.77e-02 0.00127 Inf  21.798 <.0001 
+
+channels =  FCz:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -6.77e-05 0.00127 Inf  -0.053 0.9984 
+ fast - slow -3.03e-03 0.00127 Inf  -2.381 0.0454 
+ med - slow  -2.96e-03 0.00127 Inf  -2.328 0.0520 
+
+channels =  Fp1:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -4.77e-03 0.00127 Inf  -3.748 0.0005 
+ fast - slow -6.55e-03 0.00127 Inf  -5.146 <.0001 
+ med - slow  -1.78e-03 0.00127 Inf  -1.398 0.3417 
+
+channels =  Fp2:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.54e-03 0.00127 Inf  -1.207 0.4488 
+ fast - slow -1.47e-02 0.00127 Inf -11.548 <.0001 
+ med - slow  -1.32e-02 0.00127 Inf -10.340 <.0001 
+
+channels =  Fpz:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -6.68e-03 0.00127 Inf  -5.249 <.0001 
+ fast - slow -3.78e-02 0.00127 Inf -29.673 <.0001 
+ med - slow  -3.11e-02 0.00127 Inf -24.424 <.0001 
+
+channels =  FT7:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.31e-02 0.00127 Inf -10.329 <.0001 
+ fast - slow  5.67e-03 0.00127 Inf   4.451 <.0001 
+ med - slow   1.88e-02 0.00127 Inf  14.780 <.0001 
+
+channels =  FT8:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -5.38e-03 0.00127 Inf  -4.228 0.0001 
+ fast - slow -9.07e-03 0.00127 Inf  -7.128 <.0001 
+ med - slow  -3.69e-03 0.00127 Inf  -2.899 0.0104 
+
+channels =  Fz:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -7.11e-03 0.00127 Inf  -5.586 <.0001 
+ fast - slow -1.95e-02 0.00127 Inf -15.342 <.0001 
+ med - slow  -1.24e-02 0.00127 Inf  -9.757 <.0001 
+
+channels =  M1:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -7.05e-03 0.00127 Inf  -5.536 <.0001 
+ fast - slow -4.80e-04 0.00127 Inf  -0.377 0.9245 
+ med - slow   6.57e-03 0.00127 Inf   5.158 <.0001 
+
+channels =  M2:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -5.25e-03 0.00127 Inf  -4.126 0.0001 
+ fast - slow -2.58e-02 0.00127 Inf -20.285 <.0001 
+ med - slow  -2.06e-02 0.00127 Inf -16.159 <.0001 
+
+channels =  O1:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -8.91e-03 0.00127 Inf  -6.997 <.0001 
+ fast - slow -1.11e-02 0.00127 Inf  -8.718 <.0001 
+ med - slow  -2.19e-03 0.00127 Inf  -1.721 0.1974 
+
+channels =  O2:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.05e-02 0.00127 Inf  -8.210 <.0001 
+ fast - slow -3.99e-04 0.00127 Inf  -0.313 0.9474 
+ med - slow   1.01e-02 0.00127 Inf   7.897 <.0001 
+
+channels =  Oz:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -7.54e-03 0.00127 Inf  -5.920 <.0001 
+ fast - slow -9.92e-03 0.00127 Inf  -7.795 <.0001 
+ med - slow  -2.39e-03 0.00127 Inf  -1.874 0.1461 
+
+channels =  P1:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.13e-02 0.00127 Inf  -8.840 <.0001 
+ fast - slow -1.63e-02 0.00127 Inf -12.799 <.0001 
+ med - slow  -5.04e-03 0.00127 Inf  -3.960 0.0002 
+
+channels =  P2:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   8.50e-04 0.00127 Inf   0.668 0.7822 
+ fast - slow -3.06e-02 0.00127 Inf -24.027 <.0001 
+ med - slow  -3.14e-02 0.00127 Inf -24.695 <.0001 
+
+channels =  P3:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.07e-03 0.00127 Inf  -0.842 0.6769 
+ fast - slow -5.72e-03 0.00127 Inf  -4.491 <.0001 
+ med - slow  -4.64e-03 0.00127 Inf  -3.649 0.0008 
+
+channels =  P4:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -3.83e-03 0.00127 Inf  -3.005 0.0075 
+ fast - slow -2.58e-02 0.00127 Inf -20.250 <.0001 
+ med - slow  -2.20e-02 0.00127 Inf -17.245 <.0001 
+
+channels =  P5:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -3.91e-03 0.00127 Inf  -3.071 0.0060 
+ fast - slow -1.87e-02 0.00127 Inf -14.697 <.0001 
+ med - slow  -1.48e-02 0.00127 Inf -11.626 <.0001 
+
+channels =  P6:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.20e-03 0.00127 Inf  -0.943 0.6131 
+ fast - slow  1.49e-03 0.00127 Inf   1.167 0.4731 
+ med - slow   2.69e-03 0.00127 Inf   2.110 0.0879 
+
+channels =  P7:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   3.58e-03 0.00127 Inf   2.811 0.0137 
+ fast - slow  1.01e-02 0.00127 Inf   7.943 <.0001 
+ med - slow   6.53e-03 0.00127 Inf   5.133 <.0001 
+
+channels =  P8:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -9.45e-03 0.00127 Inf  -7.423 <.0001 
+ fast - slow -3.56e-04 0.00127 Inf  -0.280 0.9577 
+ med - slow   9.09e-03 0.00127 Inf   7.143 <.0001 
+
+channels =  PO3:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -6.15e-03 0.00127 Inf  -4.831 <.0001 
+ fast - slow -7.15e-03 0.00127 Inf  -5.617 <.0001 
+ med - slow  -1.00e-03 0.00127 Inf  -0.786 0.7115 
+
+channels =  PO4:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -5.60e-04 0.00127 Inf  -0.440 0.8987 
+ fast - slow  1.42e-02 0.00127 Inf  11.184 <.0001 
+ med - slow   1.48e-02 0.00127 Inf  11.624 <.0001 
+
+channels =  PO5:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -6.98e-03 0.00127 Inf  -5.487 <.0001 
+ fast - slow -1.11e-02 0.00127 Inf  -8.716 <.0001 
+ med - slow  -4.11e-03 0.00127 Inf  -3.230 0.0036 
+
+channels =  PO6:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   4.83e-04 0.00127 Inf   0.380 0.9236 
+ fast - slow  3.74e-03 0.00127 Inf   2.942 0.0092 
+ med - slow   3.26e-03 0.00127 Inf   2.562 0.0281 
+
+channels =  PO7:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med   3.88e-03 0.00127 Inf   3.048 0.0065 
+ fast - slow  5.22e-03 0.00127 Inf   4.100 0.0001 
+ med - slow   1.34e-03 0.00127 Inf   1.052 0.5437 
+
+channels =  PO8:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.37e-03 0.00127 Inf  -1.075 0.5296 
+ fast - slow -3.85e-03 0.00127 Inf  -3.026 0.0070 
+ med - slow  -2.48e-03 0.00127 Inf  -1.951 0.1246 
+
+channels =  POz:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -6.94e-03 0.00127 Inf  -5.452 <.0001 
+ fast - slow -3.15e-03 0.00127 Inf  -2.476 0.0354 
+ med - slow   3.79e-03 0.00127 Inf   2.976 0.0082 
+
+channels =  Pz:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -5.27e-03 0.00127 Inf  -4.140 0.0001 
+ fast - slow -8.37e-03 0.00127 Inf  -6.575 <.0001 
+ med - slow  -3.10e-03 0.00127 Inf  -2.435 0.0395 
+
+channels =  T7:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -7.98e-03 0.00127 Inf  -6.269 <.0001 
+ fast - slow -4.74e-03 0.00127 Inf  -3.723 0.0006 
+ med - slow   3.24e-03 0.00127 Inf   2.546 0.0294 
+
+channels =  T8:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.43e-02 0.00127 Inf -11.202 <.0001 
+ fast - slow  4.99e-03 0.00127 Inf   3.923 0.0003 
+ med - slow   1.93e-02 0.00127 Inf  15.125 <.0001 
+
+channels =  TP7:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -1.47e-03 0.00127 Inf  -1.157 0.4790 
+ fast - slow -1.17e-02 0.00127 Inf  -9.227 <.0001 
+ med - slow  -1.03e-02 0.00127 Inf  -8.070 <.0001 
+
+channels =  TP8:
+ contrast     estimate      SE  df z.ratio p.value
+ fast - med  -5.63e-03 0.00127 Inf  -4.422 <.0001 
+ fast - slow -1.26e-02 0.00127 Inf  -9.929 <.0001 
+ med - slow  -7.01e-03 0.00127 Inf  -5.507 <.0001 
+
+Degrees-of-freedom method: asymptotic 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+

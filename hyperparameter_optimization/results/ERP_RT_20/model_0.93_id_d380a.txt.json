@@ -1,0 +1,33 @@
+{
+    "best_val_accuracy": 0.9310382604598999,
+    "best_val_loss": 0.28400121873519457,
+    "loss": -0.9310382604598999,
+    "model_name": "model_0.93_id_d380a",
+    "real_loss": 0.30351648882764287,
+    "space": {
+        "activation": "relu",
+        "arch_type": "normal",
+        "batch_size": 150.0,
+        "conv_dropout_drop_proba": 0.06151327875011926,
+        "conv_hiddn_units_mult": 0.7396254791160066,
+        "conv_kernel_size": 3.0,
+        "conv_pool_res_start_idx": 1.0,
+        "epochs": 40.0,
+        "fc_dropout_drop_proba": 0.4359132901618359,
+        "fc_layer": null,
+        "l2_weight_reg_mult": 0.9094975228458264,
+        "lr_rate_mult": 0.9555925615463489,
+        "lstm_dropout_drop_proba": 0.3882166654616459,
+        "lstm_layer": 0.46594779018954935,
+        "nb_conv_pool_layers": 2.0,
+        "no_stack_vgg": 2,
+        "one_more_fc_layer": false,
+        "one_more_lstm_layer": false,
+        "optimizer": "RMSprop",
+        "pool_size": 4,
+        "res_conv_kernel_size": 3.0,
+        "residual": null,
+        "use_BN": false
+    },
+    "status": "ok"
+}

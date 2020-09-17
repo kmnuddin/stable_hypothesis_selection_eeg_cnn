@@ -1,0 +1,33 @@
+{
+    "best_val_accuracy": 0.9655701518058777,
+    "best_val_loss": 0.2490901665990813,
+    "loss": -0.9655701518058777,
+    "model_name": "model_0.97_id_cef01",
+    "real_loss": 0.25198288340317576,
+    "space": {
+        "activation": "relu",
+        "arch_type": "normal",
+        "batch_size": 160.0,
+        "conv_dropout_drop_proba": 0.16821757123361702,
+        "conv_hiddn_units_mult": 1.075157785186786,
+        "conv_kernel_size": 3.0,
+        "conv_pool_res_start_idx": 0.0,
+        "epochs": 40.0,
+        "fc_dropout_drop_proba": 0.22683605315275973,
+        "fc_layer": 0.7300328816372439,
+        "l2_weight_reg_mult": 1.6302886917925263,
+        "lr_rate_mult": 1.4157319807559774,
+        "lstm_dropout_drop_proba": 0.3388933040499181,
+        "lstm_layer": null,
+        "nb_conv_pool_layers": 4.0,
+        "no_stack_vgg": 4,
+        "one_more_fc_layer": false,
+        "one_more_lstm_layer": false,
+        "optimizer": "Nadam",
+        "pool_size": 2,
+        "res_conv_kernel_size": 3.0,
+        "residual": null,
+        "use_BN": false
+    },
+    "status": "ok"
+}

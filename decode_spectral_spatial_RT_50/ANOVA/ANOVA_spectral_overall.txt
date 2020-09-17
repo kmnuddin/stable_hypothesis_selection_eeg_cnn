@@ -1,0 +1,136 @@
+NULL
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: saliency ~ bands * groups + (1 | subs)
+   Data: newSal
+
+     AIC      BIC   logLik deviance df.resid 
+ -4491.9  -4446.7   2256.9  -4513.9      439 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.5623 -0.4580 -0.0204  0.4145  3.9823 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev. 
+ subs     (Intercept) 2.404e-07 0.0004903
+ Residual             2.400e-06 0.0015491
+Number of obs: 450, groups:  subs, 50
+
+Fixed effects:
+                        Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)            1.412e-02  2.298e-04  4.220e+02  61.445  < 2e-16 ***
+bandsbeta             -9.017e-03  3.098e-04  4.000e+02 -29.105  < 2e-16 ***
+bandsgamma             9.366e-03  3.098e-04  4.000e+02  30.228  < 2e-16 ***
+groupsmed              2.008e-03  3.098e-04  4.000e+02   6.480 2.71e-10 ***
+groupsslow             2.496e-03  3.098e-04  4.000e+02   8.056 9.13e-15 ***
+bandsbeta:groupsmed   -1.382e-03  4.382e-04  4.000e+02  -3.153  0.00174 ** 
+bandsgamma:groupsmed   2.083e-03  4.382e-04  4.000e+02   4.754 2.78e-06 ***
+bandsbeta:groupsslow  -1.124e-03  4.382e-04  4.000e+02  -2.565  0.01068 *  
+bandsgamma:groupsslow  1.118e-03  4.382e-04  4.000e+02   2.552  0.01108 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+              (Intr) bndsbt bndsgm grpsmd grpssl bndsbt:grpsm bndsgmm:grpsm bndsbt:grpss
+bandsbeta     -0.674                                                                    
+bandsgamma    -0.674  0.500                                                             
+groupsmed     -0.674  0.500  0.500                                                      
+groupsslow    -0.674  0.500  0.500  0.500                                               
+bndsbt:grpsm   0.477 -0.707 -0.354 -0.707 -0.354                                        
+bndsgmm:grpsm  0.477 -0.354 -0.707 -0.707 -0.354  0.500                                 
+bndsbt:grpss   0.477 -0.707 -0.354 -0.354 -0.707  0.500        0.250                    
+bndsgmm:grpss  0.477 -0.354 -0.707 -0.354 -0.707  0.250        0.500         0.500      
+Type III Analysis of Variance Table with Satterthwaite's method
+                Sum Sq   Mean Sq NumDF DenDF F value    Pr(>F)    
+bands        0.0308703 0.0154351     2   400 6431.90 < 2.2e-16 ***
+groups       0.0005654 0.0002827     2   400  117.81 < 2.2e-16 ***
+bands:groups 0.0001571 0.0000393     4   400   16.37 1.978e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+$lsmeans
+ bands  lsmean       SE  df lower.CL upper.CL
+ alpha 0.01562 0.000146 189  0.01527  0.01597
+ beta  0.00577 0.000146 189  0.00542  0.00612
+ gamma 0.02605 0.000146 189  0.02570  0.02640
+
+Results are averaged over the levels of: groups 
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 3 estimates 
+
+$contrasts
+ contrast      estimate       SE  df t.ratio  p.value
+ alpha - beta   0.00985 0.000181 408   54.527 <.0001 
+ alpha - gamma -0.01043 0.000181 408  -57.737 <.0001 
+ beta - gamma  -0.02029 0.000181 408 -112.264 <.0001 
+
+Results are averaged over the levels of: groups 
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+$lsmeans
+ groups lsmean       SE  df lower.CL upper.CL
+ fast   0.0142 0.000146 189   0.0139   0.0146
+ med    0.0165 0.000146 189   0.0161   0.0168
+ slow   0.0167 0.000146 189   0.0164   0.0171
+
+Results are averaged over the levels of: bands 
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 3 estimates 
+
+$contrasts
+ contrast     estimate       SE  df t.ratio p.value
+ fast - med  -0.002241 0.000181 408 -12.404 <.0001 
+ fast - slow -0.002494 0.000181 408 -13.804 <.0001 
+ med - slow  -0.000253 0.000181 408  -1.399 0.3422 
+
+Results are averaged over the levels of: bands 
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+$lsmeans
+bands = alpha:
+ groups  lsmean       SE  df lower.CL upper.CL
+ fast   0.01412 0.000232 431  0.01356  0.01468
+ med    0.01613 0.000232 431  0.01557  0.01668
+ slow   0.01662 0.000232 431  0.01606  0.01717
+
+bands = beta:
+ groups  lsmean       SE  df lower.CL upper.CL
+ fast   0.00510 0.000232 431  0.00455  0.00566
+ med    0.00573 0.000232 431  0.00517  0.00628
+ slow   0.00647 0.000232 431  0.00592  0.00703
+
+bands = gamma:
+ groups  lsmean       SE  df lower.CL upper.CL
+ fast   0.02348 0.000232 431  0.02293  0.02404
+ med    0.02758 0.000232 431  0.02702  0.02813
+ slow   0.02710 0.000232 431  0.02654  0.02766
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 3 estimates 
+
+$contrasts
+bands = alpha:
+ contrast     estimate       SE  df t.ratio p.value
+ fast - med  -0.002008 0.000313 408  -6.414 <.0001 
+ fast - slow -0.002496 0.000313 408  -7.976 <.0001 
+ med - slow  -0.000489 0.000313 408  -1.561 0.2638 
+
+bands = beta:
+ contrast     estimate       SE  df t.ratio p.value
+ fast - med  -0.000626 0.000313 408  -2.000 0.1135 
+ fast - slow -0.001372 0.000313 408  -4.385 <.0001 
+ med - slow  -0.000746 0.000313 408  -2.385 0.0461 
+
+bands = gamma:
+ contrast     estimate       SE  df t.ratio p.value
+ fast - med  -0.004091 0.000313 408 -13.070 <.0001 
+ fast - slow -0.003614 0.000313 408 -11.548 <.0001 
+ med - slow   0.000476 0.000313 408   1.522 0.2816 
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+

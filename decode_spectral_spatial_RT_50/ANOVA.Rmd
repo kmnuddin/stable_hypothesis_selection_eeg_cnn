@@ -1,0 +1,37 @@
+sink('ANOVA_RT_50.txt')  #write output to text
+
+
+rm(list = ls())  # clear environment
+cat("\014") #clear console
+dev.new() #clear figures
+
+library(lme4)
+library(lmerTest)
+library(lsmeans)
+library(ggplot2)
+library(effects)
+library(gridExtra)
+library(sjPlot)
+#library(readxl)
+
+
+
+# pp <- "/cp_RT_50_classification_bp_topomap/";  #set working directory
+# setwd(pp)
+
+data1 <- read.csv('~/decode_cp_RT_cnn/cp_RT_50_classification_bp_topomap/saliency_score_RT_50.csv')
+newSal <- aggregate(saliency~subs*bands*groups, FUN=mean,data=data1)  #collapse each subject
+
+
+# #Mixed-model ANOVA-----------------------------
+lm <- lmer(saliency ~ bands*groups + (1|subs),  data=newSal,REML=FALSE) 
+summary(lm)
+anova(lm)
+# #qqnorm(residuals(lm))
+lsmeans(lm,pairwise ~ bands, adjust="tukey")      # compare bands
+lsmeans(lm,pairwise ~ groups, adjust="tukey")    # compare groups
+lsmeans(lm,pairwise ~ groups|bands, adjust="tukey")
+plot_model(lm, type = "int",terms = c("bands","groups"),axis.title=c("bands","Saliency"),legend.title="RT group",colors = c("red", "ForestGreen","blue"))
+
+sink()
+

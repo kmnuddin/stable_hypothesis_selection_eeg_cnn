@@ -1,0 +1,61 @@
+null device 
+          1 
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: exp(saliency) ~ timesteps * groups + (1 | subs)
+   Data: newSal
+
+     AIC      BIC   logLik deviance df.resid 
+  -77630   -77479    38844   -77688     1321 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-5.0029 -0.0289  0.0000  0.0173  1.2421 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev. 
+ subs     (Intercept) 5.821e-29 7.629e-15
+ Residual             5.909e-27 7.687e-14
+Number of obs: 1350, groups:  subs, 50
+
+Fixed effects:
+                                   Estimate Std. Error         df    t value Pr(>|t|)
+(Intercept)                       1.086e+00  1.092e-14  1.243e-12  9.944e+13        1
+timesteps100-200 ms               1.359e-01  1.537e-14  1.243e-12  8.843e+12        1
+timesteps200-300 ms               2.715e-01  1.537e-14  1.243e-12  1.766e+13        1
+timesteps300-400 ms               4.093e-01  1.537e-14  1.243e-12  2.662e+13        1
+timesteps400-500 ms               3.420e-01  1.537e-14  1.243e-12  2.224e+13        1
+timesteps500-600 ms               1.805e-01  1.537e-14  1.243e-12  1.174e+13        1
+timesteps600-700 ms               7.618e-02  1.537e-14  1.243e-12  4.955e+12        1
+timesteps700-800 ms               2.383e-01  1.537e-14  1.243e-12  1.550e+13        1
+timestepsPre-stimulus            -8.632e-02  1.537e-14  1.243e-12 -5.615e+12        1
+groupsmed                         9.844e-02  1.537e-14  1.243e-12  6.403e+12        1
+groupsslow                        1.389e+00  1.537e-14  1.243e-12  9.034e+13        1
+timesteps100-200 ms:groupsmed     3.540e-03  2.174e-14  1.243e-12  1.628e+11        1
+timesteps200-300 ms:groupsmed    -1.394e-01  2.174e-14  1.243e-12 -6.410e+12        1
+timesteps300-400 ms:groupsmed    -3.103e-01  2.174e-14  1.243e-12 -1.427e+13        1
+timesteps400-500 ms:groupsmed    -3.002e-01  2.174e-14  1.243e-12 -1.381e+13        1
+timesteps500-600 ms:groupsmed    -1.079e-01  2.174e-14  1.243e-12 -4.963e+12        1
+timesteps600-700 ms:groupsmed     2.637e-02  2.174e-14  1.243e-12  1.213e+12        1
+timesteps700-800 ms:groupsmed     6.889e-02  2.174e-14  1.243e-12  3.169e+12        1
+timestepsPre-stimulus:groupsmed  -1.827e-02  2.174e-14  1.243e-12 -8.403e+11        1
+timesteps100-200 ms:groupsslow    9.331e-02  2.174e-14  1.243e-12  4.292e+12        1
+timesteps200-300 ms:groupsslow   -3.543e-02  2.174e-14  1.243e-12 -1.629e+12        1
+timesteps300-400 ms:groupsslow   -2.710e-01  2.174e-14  1.243e-12 -1.247e+13        1
+timesteps400-500 ms:groupsslow   -1.642e-01  2.174e-14  1.243e-12 -7.550e+12        1
+timesteps500-600 ms:groupsslow   -1.806e-01  2.174e-14  1.243e-12 -8.307e+12        1
+timesteps600-700 ms:groupsslow   -1.176e-01  2.174e-14  1.243e-12 -5.409e+12        1
+timesteps700-800 ms:groupsslow    4.754e-03  2.174e-14  1.243e-12  2.186e+11        1
+timestepsPre-stimulus:groupsslow -4.280e-02  2.174e-14  1.243e-12 -1.969e+12        1
+convergence code: 0
+Model failed to converge with max|grad| = 3.51975 (tol = 0.002, component 1)
+Model is nearly unidentifiable: very large eigenvalue
+ - Rescale variables?
+
+Type III Analysis of Variance Table with Satterthwaite's method
+                 Sum Sq Mean Sq NumDF      DenDF    F value Pr(>F)
+timesteps         17.64   2.205     8 1.2425e-12 3.7317e+26      1
+groups           509.81 254.905     2 1.2425e-12 4.3136e+28      1
+timesteps:groups   5.46   0.341    16 1.2425e-12 5.7715e+25      1
+Error: Confidence intervals could not be computed.
+* Reason: "object 'saliency' not found"
+* Source: eval(predvars, data, env)

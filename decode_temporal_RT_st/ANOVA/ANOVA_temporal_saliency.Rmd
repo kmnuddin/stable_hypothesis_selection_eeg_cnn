@@ -1,0 +1,60 @@
+ 
+
+sink('ANOVA_tempral_overall.txt')  #write output to text
+
+
+rm(list = ls())  # clear environment
+cat("\014") #clear console
+dev.off() #clear figures
+
+library(lme4)
+library(lmerTest)
+library(lsmeans)
+library(ggplot2)
+library(effects)
+library(gridExtra)
+library(sjPlot)
+#library(readxl)
+ 
+
+data1 <- read.csv('Overall_Temporal_Saliency.csv')
+newSal <- aggregate(saliency ~ subs * timesteps*groups, FUN=mean,data=data1)  #collapse each subject
+
+
+#Mixed-model ANOVA-----------------------------
+lm <- lmer(saliency~ timesteps * groups,  data=newSal,REML=FALSE) 
+summary(lm)
+anova(lm)
+#qqnorm(residuals(lm))
+
+lsmeans(lm,pairwise ~ timesteps * groups + (1|subs), adjust="tukey")
+plot_model(lm, type = "int",terms = c("timesteps","groups"),axis.title=c("Time (ms)","Saliency"),legend.title="RT group",colors = c("red", "ForestGreen","blue")) + geom_line()
+
+
+#Test random effect is sig. 
+#lm_noRand <- lm(salience ~ timeslice*group,  data=newSal) #no random effect
+#anova(lm_noRand)
+#anova(lm,lm_noRand) #test whether random effect is sig.
+
+ 
+
+sink()
+
+sink('ANOVA_tempral_individual_TM.txt')
+
+data2 <- read.csv('temporal_Saliency_all_TMs.csv')
+newSal <- aggregate(exp(saliency~subs*timesteps*groups*model, FUN=mean,data=data2)  #collapse each subject
+
+
+#Mixed-model ANOVA-----------------------------
+lm <- lmer(saliency ~ timesteps*groups*model + (1|subs),  data=newSal,REML=FALSE, control = lmerControl(optimizer ="Nelder_Mead")) 
+summary(lm)
+anova(lm)
+#qqnorm(residuals(lm))
+
+lsmeans(lm,pairwise ~ model, adjust="tukey")
+lsmeans(lm,pairwise ~ groups|model, adjust="tukey")
+plot_model(lm, type = "int",terms = c("timesteps","groups", "model"),axis.title=c("Time (ms)","Saliency"),legend.title="RT group",colors = c("red", "ForestGreen","blue")) + geom_line()
+
+sink() 
+

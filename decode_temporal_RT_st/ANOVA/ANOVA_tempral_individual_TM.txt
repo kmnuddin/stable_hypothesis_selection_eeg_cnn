@@ -1,0 +1,434 @@
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: saliency ~ timesteps * groups * model + (1 | subs)
+   Data: newSal
+Control: lmerControl(optimizer = "Nelder_Mead")
+
+      AIC       BIC    logLik  deviance  df.resid 
+-773605.7 -771562.9  387074.9 -774149.7     13228 
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-15.4920  -0.0029  -0.0003   0.0032   3.8847 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev. 
+ subs     (Intercept) 0.000e+00 0.000e+00
+ Residual             7.297e-27 8.542e-14
+Number of obs: 13500, groups:  subs, 50
+
+Fixed effects:
+                                              Estimate Std. Error         df    t value Pr(>|t|)
+(Intercept)                                  1.506e-01  1.208e-14  1.527e-11  1.247e+13        1
+timesteps100-200 ms                          2.054e-02  1.708e-14  1.527e-11  1.202e+12        1
+timesteps200-300 ms                          3.291e-02  1.708e-14  1.527e-11  1.926e+12        1
+timesteps300-400 ms                          1.674e-02  1.708e-14  1.527e-11  9.801e+11        1
+timesteps400-500 ms                          1.408e-02  1.708e-14  1.527e-11  8.239e+11        1
+timesteps500-600 ms                          1.452e-02  1.708e-14  1.527e-11  8.501e+11        1
+timesteps600-700 ms                          8.750e-03  1.708e-14  1.527e-11  5.122e+11        1
+timesteps700-800 ms                          1.809e-02  1.708e-14  1.527e-11  1.059e+12        1
+timestepsPre-stimulus                        5.938e-04  1.708e-14  1.527e-11  3.476e+10        1
+groupsmed                                   -1.357e-03  1.708e-14  1.527e-11 -7.944e+10        1
+groupsslow                                   1.812e-02  1.708e-14  1.527e-11  1.061e+12        1
+modelTM-10                                   1.480e-02  1.708e-14  1.527e-11  8.661e+11        1
+modelTM-2                                    4.085e-02  1.708e-14  1.527e-11  2.391e+12        1
+modelTM-3                                    2.923e-03  1.708e-14  1.527e-11  1.711e+11        1
+modelTM-4                                    4.451e-02  1.708e-14  1.527e-11  2.605e+12        1
+modelTM-5                                   -8.854e-03  1.708e-14  1.527e-11 -5.183e+11        1
+modelTM-6                                    3.706e-02  1.708e-14  1.527e-11  2.169e+12        1
+modelTM-7                                    2.155e-02  1.708e-14  1.527e-11  1.261e+12        1
+modelTM-8                                   -7.889e-03  1.708e-14  1.527e-11 -4.618e+11        1
+modelTM-9                                   -8.937e-03  1.708e-14  1.527e-11 -5.231e+11        1
+timesteps100-200 ms:groupsmed               -9.571e-04  2.416e-14  1.527e-11 -3.961e+10        1
+timesteps200-300 ms:groupsmed               -1.758e-02  2.416e-14  1.527e-11 -7.276e+11        1
+timesteps300-400 ms:groupsmed               -9.276e-03  2.416e-14  1.527e-11 -3.839e+11        1
+timesteps400-500 ms:groupsmed               -2.315e-03  2.416e-14  1.527e-11 -9.583e+10        1
+timesteps500-600 ms:groupsmed                2.748e-03  2.416e-14  1.527e-11  1.138e+11        1
+timesteps600-700 ms:groupsmed                5.366e-03  2.416e-14  1.527e-11  2.221e+11        1
+timesteps700-800 ms:groupsmed                3.972e-03  2.416e-14  1.527e-11  1.644e+11        1
+timestepsPre-stimulus:groupsmed              1.211e-03  2.416e-14  1.527e-11  5.010e+10        1
+timesteps100-200 ms:groupsslow               4.071e-03  2.416e-14  1.527e-11  1.685e+11        1
+timesteps200-300 ms:groupsslow              -9.152e-03  2.416e-14  1.527e-11 -3.788e+11        1
+timesteps300-400 ms:groupsslow              -3.746e-03  2.416e-14  1.527e-11 -1.550e+11        1
+timesteps400-500 ms:groupsslow               8.153e-03  2.416e-14  1.527e-11  3.374e+11        1
+timesteps500-600 ms:groupsslow              -3.977e-03  2.416e-14  1.527e-11 -1.646e+11        1
+timesteps600-700 ms:groupsslow               6.114e-03  2.416e-14  1.527e-11  2.531e+11        1
+timesteps700-800 ms:groupsslow               4.375e-03  2.416e-14  1.527e-11  1.811e+11        1
+timestepsPre-stimulus:groupsslow             6.535e-03  2.416e-14  1.527e-11  2.705e+11        1
+timesteps100-200 ms:modelTM-10              -1.141e-02  2.416e-14  1.527e-11 -4.721e+11        1
+timesteps200-300 ms:modelTM-10              -1.291e-02  2.416e-14  1.527e-11 -5.345e+11        1
+timesteps300-400 ms:modelTM-10               1.818e-02  2.416e-14  1.527e-11  7.526e+11        1
+timesteps400-500 ms:modelTM-10               1.604e-02  2.416e-14  1.527e-11  6.637e+11        1
+timesteps500-600 ms:modelTM-10               9.579e-04  2.416e-14  1.527e-11  3.965e+10        1
+timesteps600-700 ms:modelTM-10              -6.684e-04  2.416e-14  1.527e-11 -2.766e+10        1
+timesteps700-800 ms:modelTM-10               6.719e-03  2.416e-14  1.527e-11  2.781e+11        1
+timestepsPre-stimulus:modelTM-10            -1.149e-02  2.416e-14  1.527e-11 -4.757e+11        1
+timesteps100-200 ms:modelTM-2                5.496e-03  2.416e-14  1.527e-11  2.275e+11        1
+timesteps200-300 ms:modelTM-2               -3.018e-02  2.416e-14  1.527e-11 -1.249e+12        1
+timesteps300-400 ms:modelTM-2               -2.037e-02  2.416e-14  1.527e-11 -8.430e+11        1
+timesteps400-500 ms:modelTM-2                4.640e-03  2.416e-14  1.527e-11  1.921e+11        1
+timesteps500-600 ms:modelTM-2                1.262e-02  2.416e-14  1.527e-11  5.225e+11        1
+timesteps600-700 ms:modelTM-2                9.513e-05  2.416e-14  1.527e-11  3.937e+09        1
+timesteps700-800 ms:modelTM-2                1.120e-02  2.416e-14  1.527e-11  4.637e+11        1
+timestepsPre-stimulus:modelTM-2             -3.260e-02  2.416e-14  1.527e-11 -1.349e+12        1
+timesteps100-200 ms:modelTM-3               -3.753e-04  2.416e-14  1.527e-11 -1.553e+10        1
+timesteps200-300 ms:modelTM-3                9.842e-03  2.416e-14  1.527e-11  4.074e+11        1
+timesteps300-400 ms:modelTM-3                4.249e-02  2.416e-14  1.527e-11  1.758e+12        1
+timesteps400-500 ms:modelTM-3                4.466e-02  2.416e-14  1.527e-11  1.848e+12        1
+timesteps500-600 ms:modelTM-3                1.745e-02  2.416e-14  1.527e-11  7.222e+11        1
+timesteps600-700 ms:modelTM-3                6.426e-03  2.416e-14  1.527e-11  2.660e+11        1
+timesteps700-800 ms:modelTM-3                2.166e-02  2.416e-14  1.527e-11  8.964e+11        1
+timestepsPre-stimulus:modelTM-3             -8.976e-03  2.416e-14  1.527e-11 -3.715e+11        1
+timesteps100-200 ms:modelTM-4               -9.561e-03  2.416e-14  1.527e-11 -3.957e+11        1
+timesteps200-300 ms:modelTM-4               -1.059e-02  2.416e-14  1.527e-11 -4.383e+11        1
+timesteps300-400 ms:modelTM-4                1.416e-02  2.416e-14  1.527e-11  5.859e+11        1
+timesteps400-500 ms:modelTM-4                1.857e-02  2.416e-14  1.527e-11  7.688e+11        1
+timesteps500-600 ms:modelTM-4                4.718e-03  2.416e-14  1.527e-11  1.953e+11        1
+timesteps600-700 ms:modelTM-4               -3.110e-03  2.416e-14  1.527e-11 -1.287e+11        1
+timesteps700-800 ms:modelTM-4                2.654e-03  2.416e-14  1.527e-11  1.098e+11        1
+timestepsPre-stimulus:modelTM-4             -1.050e-02  2.416e-14  1.527e-11 -4.344e+11        1
+timesteps100-200 ms:modelTM-5               -1.721e-02  2.416e-14  1.527e-11 -7.121e+11        1
+timesteps200-300 ms:modelTM-5               -1.816e-02  2.416e-14  1.527e-11 -7.516e+11        1
+timesteps300-400 ms:modelTM-5                2.344e-02  2.416e-14  1.527e-11  9.701e+11        1
+timesteps400-500 ms:modelTM-5                1.232e-02  2.416e-14  1.527e-11  5.100e+11        1
+timesteps500-600 ms:modelTM-5               -6.152e-03  2.416e-14  1.527e-11 -2.546e+11        1
+timesteps600-700 ms:modelTM-5               -6.758e-03  2.416e-14  1.527e-11 -2.797e+11        1
+timesteps700-800 ms:modelTM-5               -1.021e-02  2.416e-14  1.527e-11 -4.224e+11        1
+timestepsPre-stimulus:modelTM-5             -1.151e-02  2.416e-14  1.527e-11 -4.763e+11        1
+timesteps100-200 ms:modelTM-6               -4.270e-03  2.416e-14  1.527e-11 -1.767e+11        1
+timesteps200-300 ms:modelTM-6               -1.082e-02  2.416e-14  1.527e-11 -4.478e+11        1
+timesteps300-400 ms:modelTM-6                1.153e-02  2.416e-14  1.527e-11  4.772e+11        1
+timesteps400-500 ms:modelTM-6                5.151e-03  2.416e-14  1.527e-11  2.132e+11        1
+timesteps500-600 ms:modelTM-6                7.822e-03  2.416e-14  1.527e-11  3.237e+11        1
+timesteps600-700 ms:modelTM-6                7.793e-03  2.416e-14  1.527e-11  3.225e+11        1
+timesteps700-800 ms:modelTM-6                7.927e-03  2.416e-14  1.527e-11  3.281e+11        1
+timestepsPre-stimulus:modelTM-6             -9.392e-03  2.416e-14  1.527e-11 -3.887e+11        1
+timesteps100-200 ms:modelTM-7               -1.406e-03  2.416e-14  1.527e-11 -5.820e+10        1
+timesteps200-300 ms:modelTM-7                2.966e-02  2.416e-14  1.527e-11  1.227e+12        1
+timesteps300-400 ms:modelTM-7                8.061e-02  2.416e-14  1.527e-11  3.336e+12        1
+timesteps400-500 ms:modelTM-7                6.391e-02  2.416e-14  1.527e-11  2.645e+12        1
+timesteps500-600 ms:modelTM-7                1.651e-02  2.416e-14  1.527e-11  6.833e+11        1
+timesteps600-700 ms:modelTM-7                5.900e-03  2.416e-14  1.527e-11  2.442e+11        1
+timesteps700-800 ms:modelTM-7                1.757e-02  2.416e-14  1.527e-11  7.272e+11        1
+timestepsPre-stimulus:modelTM-7             -1.139e-03  2.416e-14  1.527e-11 -4.714e+10        1
+timesteps100-200 ms:modelTM-8               -1.759e-02  2.416e-14  1.527e-11 -7.282e+11        1
+timesteps200-300 ms:modelTM-8               -5.092e-03  2.416e-14  1.527e-11 -2.108e+11        1
+timesteps300-400 ms:modelTM-8                3.005e-02  2.416e-14  1.527e-11  1.244e+12        1
+timesteps400-500 ms:modelTM-8                1.927e-02  2.416e-14  1.527e-11  7.976e+11        1
+timesteps500-600 ms:modelTM-8               -6.988e-03  2.416e-14  1.527e-11 -2.892e+11        1
+timesteps600-700 ms:modelTM-8               -1.023e-02  2.416e-14  1.527e-11 -4.232e+11        1
+timesteps700-800 ms:modelTM-8               -1.040e-03  2.416e-14  1.527e-11 -4.303e+10        1
+timestepsPre-stimulus:modelTM-8             -1.161e-02  2.416e-14  1.527e-11 -4.804e+11        1
+timesteps100-200 ms:modelTM-9               -1.103e-02  2.416e-14  1.527e-11 -4.564e+11        1
+timesteps200-300 ms:modelTM-9               -1.975e-02  2.416e-14  1.527e-11 -8.175e+11        1
+timesteps300-400 ms:modelTM-9                6.662e-03  2.416e-14  1.527e-11  2.757e+11        1
+timesteps400-500 ms:modelTM-9               -5.022e-03  2.416e-14  1.527e-11 -2.079e+11        1
+timesteps500-600 ms:modelTM-9               -1.231e-02  2.416e-14  1.527e-11 -5.094e+11        1
+timesteps600-700 ms:modelTM-9               -7.630e-03  2.416e-14  1.527e-11 -3.158e+11        1
+timesteps700-800 ms:modelTM-9               -5.281e-03  2.416e-14  1.527e-11 -2.186e+11        1
+timestepsPre-stimulus:modelTM-9             -5.634e-03  2.416e-14  1.527e-11 -2.332e+11        1
+groupsmed:modelTM-10                         6.687e-03  2.416e-14  1.527e-11  2.768e+11        1
+groupsslow:modelTM-10                        4.784e-02  2.416e-14  1.527e-11  1.980e+12        1
+groupsmed:modelTM-2                          2.423e-03  2.416e-14  1.527e-11  1.003e+11        1
+groupsslow:modelTM-2                         2.096e-02  2.416e-14  1.527e-11  8.676e+11        1
+groupsmed:modelTM-3                          1.032e-02  2.416e-14  1.527e-11  4.271e+11        1
+groupsslow:modelTM-3                         6.525e-02  2.416e-14  1.527e-11  2.700e+12        1
+groupsmed:modelTM-4                          2.380e-02  2.416e-14  1.527e-11  9.851e+11        1
+groupsslow:modelTM-4                         1.745e-01  2.416e-14  1.527e-11  7.220e+12        1
+groupsmed:modelTM-5                          1.988e-02  2.416e-14  1.527e-11  8.229e+11        1
+groupsslow:modelTM-5                         1.574e-02  2.416e-14  1.527e-11  6.513e+11        1
+groupsmed:modelTM-6                          1.091e-02  2.416e-14  1.527e-11  4.514e+11        1
+groupsslow:modelTM-6                         1.712e-01  2.416e-14  1.527e-11  7.087e+12        1
+groupsmed:modelTM-7                          2.004e-02  2.416e-14  1.527e-11  8.293e+11        1
+groupsslow:modelTM-7                         2.346e-01  2.416e-14  1.527e-11  9.710e+12        1
+groupsmed:modelTM-8                          6.097e-03  2.416e-14  1.527e-11  2.524e+11        1
+groupsslow:modelTM-8                         2.108e-02  2.416e-14  1.527e-11  8.726e+11        1
+groupsmed:modelTM-9                          1.495e-02  2.416e-14  1.527e-11  6.186e+11        1
+groupsslow:modelTM-9                         3.146e-02  2.416e-14  1.527e-11  1.302e+12        1
+timesteps100-200 ms:groupsmed:modelTM-10     1.380e-02  3.417e-14  1.527e-11  4.038e+11        1
+timesteps200-300 ms:groupsmed:modelTM-10     1.949e-02  3.417e-14  1.527e-11  5.705e+11        1
+timesteps300-400 ms:groupsmed:modelTM-10    -9.898e-03  3.417e-14  1.527e-11 -2.897e+11        1
+timesteps400-500 ms:groupsmed:modelTM-10    -2.376e-02  3.417e-14  1.527e-11 -6.952e+11        1
+timesteps500-600 ms:groupsmed:modelTM-10    -9.316e-03  3.417e-14  1.527e-11 -2.726e+11        1
+timesteps600-700 ms:groupsmed:modelTM-10    -5.284e-03  3.417e-14  1.527e-11 -1.546e+11        1
+timesteps700-800 ms:groupsmed:modelTM-10    -2.283e-03  3.417e-14  1.527e-11 -6.682e+10        1
+timestepsPre-stimulus:groupsmed:modelTM-10  -2.702e-03  3.417e-14  1.527e-11 -7.908e+10        1
+timesteps100-200 ms:groupsslow:modelTM-10    4.419e-03  3.417e-14  1.527e-11  1.293e+11        1
+timesteps200-300 ms:groupsslow:modelTM-10    8.650e-03  3.417e-14  1.527e-11  2.531e+11        1
+timesteps300-400 ms:groupsslow:modelTM-10   -1.733e-02  3.417e-14  1.527e-11 -5.070e+11        1
+timesteps400-500 ms:groupsslow:modelTM-10   -3.591e-02  3.417e-14  1.527e-11 -1.051e+12        1
+timesteps500-600 ms:groupsslow:modelTM-10   -1.421e-02  3.417e-14  1.527e-11 -4.159e+11        1
+timesteps600-700 ms:groupsslow:modelTM-10   -1.859e-02  3.417e-14  1.527e-11 -5.440e+11        1
+timesteps700-800 ms:groupsslow:modelTM-10   -1.285e-02  3.417e-14  1.527e-11 -3.761e+11        1
+timestepsPre-stimulus:groupsslow:modelTM-10 -1.232e-02  3.417e-14  1.527e-11 -3.605e+11        1
+timesteps100-200 ms:groupsmed:modelTM-2     -2.561e-03  3.417e-14  1.527e-11 -7.494e+10        1
+timesteps200-300 ms:groupsmed:modelTM-2      3.561e-02  3.417e-14  1.527e-11  1.042e+12        1
+timesteps300-400 ms:groupsmed:modelTM-2      2.888e-02  3.417e-14  1.527e-11  8.451e+11        1
+timesteps400-500 ms:groupsmed:modelTM-2     -1.478e-02  3.417e-14  1.527e-11 -4.326e+11        1
+timesteps500-600 ms:groupsmed:modelTM-2     -5.169e-02  3.417e-14  1.527e-11 -1.513e+12        1
+timesteps600-700 ms:groupsmed:modelTM-2     -1.691e-02  3.417e-14  1.527e-11 -4.950e+11        1
+timesteps700-800 ms:groupsmed:modelTM-2      5.488e-03  3.417e-14  1.527e-11  1.606e+11        1
+timestepsPre-stimulus:groupsmed:modelTM-2   -3.342e-03  3.417e-14  1.527e-11 -9.781e+10        1
+timesteps100-200 ms:groupsslow:modelTM-2    -1.567e-02  3.417e-14  1.527e-11 -4.586e+11        1
+timesteps200-300 ms:groupsslow:modelTM-2     1.174e-02  3.417e-14  1.527e-11  3.437e+11        1
+timesteps300-400 ms:groupsslow:modelTM-2     7.388e-03  3.417e-14  1.527e-11  2.162e+11        1
+timesteps400-500 ms:groupsslow:modelTM-2    -1.198e-02  3.417e-14  1.527e-11 -3.507e+11        1
+timesteps500-600 ms:groupsslow:modelTM-2    -1.779e-02  3.417e-14  1.527e-11 -5.205e+11        1
+timesteps600-700 ms:groupsslow:modelTM-2    -3.063e-02  3.417e-14  1.527e-11 -8.963e+11        1
+timesteps700-800 ms:groupsslow:modelTM-2    -2.546e-02  3.417e-14  1.527e-11 -7.450e+11        1
+timestepsPre-stimulus:groupsslow:modelTM-2   9.640e-04  3.417e-14  1.527e-11  2.821e+10        1
+timesteps100-200 ms:groupsmed:modelTM-3      2.430e-03  3.417e-14  1.527e-11  7.112e+10        1
+timesteps200-300 ms:groupsmed:modelTM-3     -2.453e-04  3.417e-14  1.527e-11 -7.178e+09        1
+timesteps300-400 ms:groupsmed:modelTM-3     -3.428e-02  3.417e-14  1.527e-11 -1.003e+12        1
+timesteps400-500 ms:groupsmed:modelTM-3     -4.994e-02  3.417e-14  1.527e-11 -1.462e+12        1
+timesteps500-600 ms:groupsmed:modelTM-3     -1.344e-02  3.417e-14  1.527e-11 -3.934e+11        1
+timesteps600-700 ms:groupsmed:modelTM-3      1.154e-02  3.417e-14  1.527e-11  3.376e+11        1
+timesteps700-800 ms:groupsmed:modelTM-3      1.135e-02  3.417e-14  1.527e-11  3.323e+11        1
+timestepsPre-stimulus:groupsmed:modelTM-3   -5.166e-03  3.417e-14  1.527e-11 -1.512e+11        1
+timesteps100-200 ms:groupsslow:modelTM-3    -1.049e-02  3.417e-14  1.527e-11 -3.071e+11        1
+timesteps200-300 ms:groupsslow:modelTM-3    -1.632e-02  3.417e-14  1.527e-11 -4.775e+11        1
+timesteps300-400 ms:groupsslow:modelTM-3    -4.679e-02  3.417e-14  1.527e-11 -1.369e+12        1
+timesteps400-500 ms:groupsslow:modelTM-3    -6.061e-02  3.417e-14  1.527e-11 -1.774e+12        1
+timesteps500-600 ms:groupsslow:modelTM-3    -3.838e-02  3.417e-14  1.527e-11 -1.123e+12        1
+timesteps600-700 ms:groupsslow:modelTM-3    -3.193e-02  3.417e-14  1.527e-11 -9.345e+11        1
+timesteps700-800 ms:groupsslow:modelTM-3    -2.438e-02  3.417e-14  1.527e-11 -7.136e+11        1
+timestepsPre-stimulus:groupsslow:modelTM-3  -9.273e-03  3.417e-14  1.527e-11 -2.714e+11        1
+timesteps100-200 ms:groupsmed:modelTM-4     -5.330e-03  3.417e-14  1.527e-11 -1.560e+11        1
+timesteps200-300 ms:groupsmed:modelTM-4      9.144e-03  3.417e-14  1.527e-11  2.676e+11        1
+timesteps300-400 ms:groupsmed:modelTM-4     -7.520e-03  3.417e-14  1.527e-11 -2.201e+11        1
+timesteps400-500 ms:groupsmed:modelTM-4     -2.011e-02  3.417e-14  1.527e-11 -5.885e+11        1
+timesteps500-600 ms:groupsmed:modelTM-4     -6.237e-03  3.417e-14  1.527e-11 -1.825e+11        1
+timesteps600-700 ms:groupsmed:modelTM-4     -9.882e-04  3.417e-14  1.527e-11 -2.892e+10        1
+timesteps700-800 ms:groupsmed:modelTM-4      9.866e-04  3.417e-14  1.527e-11  2.887e+10        1
+timestepsPre-stimulus:groupsmed:modelTM-4    1.474e-03  3.417e-14  1.527e-11  4.314e+10        1
+timesteps100-200 ms:groupsslow:modelTM-4    -1.364e-02  3.417e-14  1.527e-11 -3.993e+11        1
+timesteps200-300 ms:groupsslow:modelTM-4    -7.353e-04  3.417e-14  1.527e-11 -2.152e+10        1
+timesteps300-400 ms:groupsslow:modelTM-4    -1.187e-02  3.417e-14  1.527e-11 -3.473e+11        1
+timesteps400-500 ms:groupsslow:modelTM-4    -2.567e-02  3.417e-14  1.527e-11 -7.514e+11        1
+timesteps500-600 ms:groupsslow:modelTM-4    -1.083e-02  3.417e-14  1.527e-11 -3.168e+11        1
+timesteps600-700 ms:groupsslow:modelTM-4    -5.756e-03  3.417e-14  1.527e-11 -1.685e+11        1
+timesteps700-800 ms:groupsslow:modelTM-4    -1.017e-02  3.417e-14  1.527e-11 -2.978e+11        1
+timestepsPre-stimulus:groupsslow:modelTM-4  -2.091e-03  3.417e-14  1.527e-11 -6.119e+10        1
+timesteps100-200 ms:groupsmed:modelTM-5     -5.099e-03  3.417e-14  1.527e-11 -1.492e+11        1
+timesteps200-300 ms:groupsmed:modelTM-5     -4.424e-03  3.417e-14  1.527e-11 -1.295e+11        1
+timesteps300-400 ms:groupsmed:modelTM-5     -3.886e-02  3.417e-14  1.527e-11 -1.137e+12        1
+timesteps400-500 ms:groupsmed:modelTM-5     -3.837e-02  3.417e-14  1.527e-11 -1.123e+12        1
+timesteps500-600 ms:groupsmed:modelTM-5     -1.427e-02  3.417e-14  1.527e-11 -4.177e+11        1
+timesteps600-700 ms:groupsmed:modelTM-5     -1.069e-02  3.417e-14  1.527e-11 -3.129e+11        1
+timesteps700-800 ms:groupsmed:modelTM-5      3.994e-05  3.417e-14  1.527e-11  1.169e+09        1
+timestepsPre-stimulus:groupsmed:modelTM-5   -6.172e-03  3.417e-14  1.527e-11 -1.806e+11        1
+timesteps100-200 ms:groupsslow:modelTM-5    -7.630e-03  3.417e-14  1.527e-11 -2.233e+11        1
+timesteps200-300 ms:groupsslow:modelTM-5    -1.100e-02  3.417e-14  1.527e-11 -3.220e+11        1
+ [ reached getOption("max.print") -- omitted 70 rows ]
+convergence code: 0
+boundary (singular) fit: see ?isSingular
+
+Type III Analysis of Variance Table with Satterthwaite's method
+                        Sum Sq Mean Sq NumDF      DenDF    F value Pr(>F)
+timesteps               1.0780  0.1348     8 1.5271e-11 1.8466e+25      1
+groups                 20.8250 10.4125     2 1.5271e-11 1.4269e+27      1
+model                  30.5018  3.3891     9 1.5271e-11 4.6444e+26      1
+timesteps:groups        0.4371  0.0273    16 1.5271e-11 3.7438e+24      1
+timesteps:model         0.5062  0.0070    72 1.5271e-11 9.6342e+23      1
+groups:model           16.1305  0.8961    18 1.5271e-11 1.2281e+26      1
+timesteps:groups:model  0.4865  0.0034   144 1.5271e-11 4.6303e+23      1
+$lsmeans
+ model lsmean       SE  df asymp.LCL asymp.UCL
+ TM-1   0.170 2.32e-15 Inf     0.170     0.170
+ TM-10  0.199 2.32e-15 Inf     0.199     0.199
+ TM-2   0.210 2.32e-15 Inf     0.210     0.210
+ TM-3   0.201 2.32e-15 Inf     0.201     0.201
+ TM-4   0.277 2.32e-15 Inf     0.277     0.277
+ TM-5   0.159 2.32e-15 Inf     0.159     0.159
+ TM-6   0.266 2.32e-15 Inf     0.266     0.266
+ TM-7   0.287 2.32e-15 Inf     0.287     0.287
+ TM-8   0.162 2.32e-15 Inf     0.162     0.162
+ TM-9   0.161 2.32e-15 Inf     0.161     0.161
+
+Results are averaged over the levels of: timesteps, groups 
+Degrees-of-freedom method: asymptotic 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 10 estimates 
+
+$contrasts
+ contrast          estimate       SE  df z.ratio             p.value
+ (TM-1) - (TM-10) -0.029202 3.29e-15 Inf  -8881470635129.000 <.0001 
+ (TM-1) - (TM-2)  -0.039461 3.29e-15 Inf -12001587963072.000 <.0001 
+ (TM-1) - (TM-3)  -0.031207 3.29e-15 Inf  -9491215841832.000 <.0001 
+ (TM-1) - (TM-4)  -0.107252 3.29e-15 Inf -32619459940554.000 <.0001 
+ (TM-1) - (TM-5)   0.010943 3.29e-15 Inf   3328185793638.000 <.0001 
+ (TM-1) - (TM-6)  -0.096262 3.29e-15 Inf -29277011281561.000 <.0001 
+ (TM-1) - (TM-7)  -0.116570 3.29e-15 Inf -35453415931429.000 <.0001 
+ (TM-1) - (TM-8)   0.007827 3.29e-15 Inf   2380477772244.000 <.0001 
+ (TM-1) - (TM-9)   0.008700 3.29e-15 Inf   2646125546166.000 <.0001 
+ (TM-10) - (TM-2) -0.010259 3.29e-15 Inf  -3120117327943.000 <.0001 
+ (TM-10) - (TM-3) -0.002005 3.29e-15 Inf   -609745206702.000 <.0001 
+ (TM-10) - (TM-4) -0.078050 3.29e-15 Inf -23737989305425.000 <.0001 
+ (TM-10) - (TM-5)  0.040145 3.29e-15 Inf  12209656428767.000 <.0001 
+ (TM-10) - (TM-6) -0.067060 3.29e-15 Inf -20395540646431.000 <.0001 
+ (TM-10) - (TM-7) -0.087368 3.29e-15 Inf -26571945296299.000 <.0001 
+ (TM-10) - (TM-8)  0.037029 3.29e-15 Inf  11261948407374.000 <.0001 
+ (TM-10) - (TM-9)  0.037902 3.29e-15 Inf  11527596181295.000 <.0001 
+ (TM-2) - (TM-3)   0.008254 3.29e-15 Inf   2510372121241.000 <.0001 
+ (TM-2) - (TM-4)  -0.067791 3.29e-15 Inf -20617871977482.000 <.0001 
+ (TM-2) - (TM-5)   0.050404 3.29e-15 Inf  15329773756710.000 <.0001 
+ (TM-2) - (TM-6)  -0.056801 3.29e-15 Inf -17275423318488.000 <.0001 
+ (TM-2) - (TM-7)  -0.077109 3.29e-15 Inf -23451827968356.000 <.0001 
+ (TM-2) - (TM-8)   0.047288 3.29e-15 Inf  14382065735317.000 <.0001 
+ (TM-2) - (TM-9)   0.048161 3.29e-15 Inf  14647713509238.000 <.0001 
+ (TM-3) - (TM-4)  -0.076045 3.29e-15 Inf -23128244098723.000 <.0001 
+ (TM-3) - (TM-5)   0.042150 3.29e-15 Inf  12819401635469.000 <.0001 
+ (TM-3) - (TM-6)  -0.065055 3.29e-15 Inf -19785795439729.000 <.0001 
+ (TM-3) - (TM-7)  -0.085363 3.29e-15 Inf -25962200089597.000 <.0001 
+ (TM-3) - (TM-8)   0.039034 3.29e-15 Inf  11871693614076.000 <.0001 
+ (TM-3) - (TM-9)   0.039907 3.29e-15 Inf  12137341387997.000 <.0001 
+ (TM-4) - (TM-5)   0.118195 3.29e-15 Inf  35947645734192.000 <.0001 
+ (TM-4) - (TM-6)   0.010990 3.29e-15 Inf   3342448658994.000 <.0001 
+ (TM-4) - (TM-7)  -0.009318 3.29e-15 Inf  -2833955990875.000 <.0001 
+ (TM-4) - (TM-8)   0.115079 3.29e-15 Inf  34999937712799.000 <.0001 
+ (TM-4) - (TM-9)   0.115952 3.29e-15 Inf  35265585486720.000 <.0001 
+ (TM-5) - (TM-6)  -0.107205 3.29e-15 Inf -32605197075198.000 <.0001 
+ (TM-5) - (TM-7)  -0.127513 3.29e-15 Inf -38781601725066.000 <.0001 
+ (TM-5) - (TM-8)  -0.003116 3.29e-15 Inf   -947708021393.000 <.0001 
+ (TM-5) - (TM-9)  -0.002243 3.29e-15 Inf   -682060247472.000 <.0001 
+ (TM-6) - (TM-7)  -0.020308 3.29e-15 Inf  -6176404649868.000 <.0001 
+ (TM-6) - (TM-8)   0.104089 3.29e-15 Inf  31657489053806.000 <.0001 
+ (TM-6) - (TM-9)   0.104962 3.29e-15 Inf  31923136827727.000 <.0001 
+ (TM-7) - (TM-8)   0.124397 3.29e-15 Inf  37833893703673.000 <.0001 
+ (TM-7) - (TM-9)   0.125270 3.29e-15 Inf  38099541477594.000 <.0001 
+ (TM-8) - (TM-9)   0.000873 3.29e-15 Inf    265647773921.000 <.0001 
+
+Results are averaged over the levels of: timesteps, groups 
+Degrees-of-freedom method: asymptotic 
+P value adjustment: tukey method for comparing a family of 10 estimates 
+
+$lsmeans
+model = TM-1:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.165 4.03e-15 Inf     0.165     0.165
+ med     0.161 4.03e-15 Inf     0.161     0.161
+ slow    0.184 4.03e-15 Inf     0.184     0.184
+
+model = TM-10:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.180 4.03e-15 Inf     0.180     0.180
+ med     0.181 4.03e-15 Inf     0.181     0.181
+ slow    0.236 4.03e-15 Inf     0.236     0.236
+
+model = TM-2:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.200 4.03e-15 Inf     0.200     0.200
+ med     0.197 4.03e-15 Inf     0.197     0.197
+ slow    0.231 4.03e-15 Inf     0.231     0.231
+
+model = TM-3:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.182 4.03e-15 Inf     0.182     0.182
+ med     0.181 4.03e-15 Inf     0.181     0.181
+ slow    0.241 4.03e-15 Inf     0.241     0.241
+
+model = TM-4:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.210 4.03e-15 Inf     0.210     0.210
+ med     0.227 4.03e-15 Inf     0.227     0.227
+ slow    0.395 4.03e-15 Inf     0.395     0.395
+
+model = TM-5:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.152 4.03e-15 Inf     0.152     0.152
+ med     0.156 4.03e-15 Inf     0.156     0.156
+ slow    0.170 4.03e-15 Inf     0.170     0.170
+
+model = TM-6:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.203 4.03e-15 Inf     0.203     0.203
+ med     0.210 4.03e-15 Inf     0.210     0.210
+ slow    0.385 4.03e-15 Inf     0.385     0.385
+
+model = TM-7:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.210 4.03e-15 Inf     0.210     0.210
+ med     0.216 4.03e-15 Inf     0.216     0.216
+ slow    0.434 4.03e-15 Inf     0.434     0.434
+
+model = TM-8:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.156 4.03e-15 Inf     0.156     0.156
+ med     0.148 4.03e-15 Inf     0.148     0.148
+ slow    0.183 4.03e-15 Inf     0.183     0.183
+
+model = TM-9:
+ groups lsmean       SE  df asymp.LCL asymp.UCL
+ fast    0.149 4.03e-15 Inf     0.149     0.149
+ med     0.146 4.03e-15 Inf     0.146     0.146
+ slow    0.189 4.03e-15 Inf     0.189     0.189
+
+Results are averaged over the levels of: timesteps 
+Degrees-of-freedom method: asymptotic 
+Confidence level used: 0.95 
+Conf-level adjustment: sidak method for 3 estimates 
+
+$contrasts
+model = TM-1:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med   0.00323 5.69e-15 Inf    566760474407.000 <.0001 
+ fast - slow -0.01949 5.69e-15 Inf  -3423031932285.000 <.0001 
+ med - slow  -0.02272 5.69e-15 Inf  -3989792406692.000 <.0001 
+
+model = TM-10:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med  -0.00124 5.69e-15 Inf   -218242703770.000 <.0001 
+ fast - slow -0.05643 5.69e-15 Inf  -9909641205389.000 <.0001 
+ med - slow  -0.05519 5.69e-15 Inf  -9691398501618.000 <.0001 
+
+model = TM-2:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med   0.00295 5.69e-15 Inf    518182585723.000 <.0001 
+ fast - slow -0.03141 5.69e-15 Inf  -5515329328188.000 <.0001 
+ med - slow  -0.03436 5.69e-15 Inf  -6033511913911.000 <.0001 
+
+model = TM-3:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med   0.00155 5.69e-15 Inf    271725224717.000 <.0001 
+ fast - slow -0.05827 5.69e-15 Inf -10232730914626.000 <.0001 
+ med - slow  -0.05982 5.69e-15 Inf -10504456139344.000 <.0001 
+
+model = TM-4:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med  -0.01740 5.69e-15 Inf  -3054897637812.000 <.0001 
+ fast - slow -0.18497 5.69e-15 Inf -32480620647980.000 <.0001 
+ med - slow  -0.16758 5.69e-15 Inf -29425723010167.000 <.0001 
+
+model = TM-5:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med  -0.00356 5.69e-15 Inf   -625225060075.000 <.0001 
+ fast - slow -0.01785 5.69e-15 Inf  -3134328514089.000 <.0001 
+ med - slow  -0.01429 5.69e-15 Inf  -2509103454014.000 <.0001 
+
+model = TM-6:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med  -0.00701 5.69e-15 Inf  -1230437502484.000 <.0001 
+ fast - slow -0.18161 5.69e-15 Inf -31890458777612.000 <.0001 
+ med - slow  -0.17461 5.69e-15 Inf -30660021275128.000 <.0001 
+
+model = TM-7:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med  -0.00641 5.69e-15 Inf  -1126021806996.000 <.0001 
+ fast - slow -0.22437 5.69e-15 Inf -39398744122596.000 <.0001 
+ med - slow  -0.21796 5.69e-15 Inf -38272722315601.000 <.0001 
+
+model = TM-8:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med   0.00865 5.69e-15 Inf   1518792406381.000 <.0001 
+ fast - slow -0.02618 5.69e-15 Inf  -4596635877161.000 <.0001 
+ med - slow  -0.03483 5.69e-15 Inf  -6115428283542.000 <.0001 
+
+model = TM-9:
+ contrast    estimate       SE  df z.ratio             p.value
+ fast - med   0.00340 5.69e-15 Inf    597336114321.000 <.0001 
+ fast - slow -0.04037 5.69e-15 Inf  -7089592880830.000 <.0001 
+ med - slow  -0.04378 5.69e-15 Inf  -7686928995151.000 <.0001 
+
+Results are averaged over the levels of: timesteps 
+Degrees-of-freedom method: asymptotic 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
