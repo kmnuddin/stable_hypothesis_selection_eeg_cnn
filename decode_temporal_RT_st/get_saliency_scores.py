@@ -28,7 +28,7 @@ def saliency_scores(sm_dir, save_dir, rt_class, window, pre_st_ts):
         for i in range(0, no_avg_ts):
             if i + 1 == no_avg_ts:
                 break
-            sc[:, i] = np.mean(s_maps_t[:, ts_indexes[i]: ts_indexes[i+1]])
+            sc[:, i] = np.median(s_maps_t[:, ts_indexes[i]: ts_indexes[i+1]], axis=1)
         np.save(save_path, sc)
 
 parser = argparse.ArgumentParser()
@@ -43,7 +43,7 @@ pre_st_ts = args.pre_st_ts
 sm_dir = 'saliency_maps'
 rt_classes = ['slow', 'med', 'fast']
 
-save_dir = 'saliency_scores'
+save_dir = 'saliency_scores/median'
 
 processes = []
 

@@ -10,4 +10,7 @@ guided_gradcams
 *.csv
 Tensorboard
 TensorBoard
-
+bootstrap_erps_RT_rate_50
+montages
+*.fif
+*.mat
