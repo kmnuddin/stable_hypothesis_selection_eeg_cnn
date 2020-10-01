@@ -6,7 +6,7 @@ import mne
 import sys
 from sklearn.cluster import KMeans
 
-class MNE_Repo_Mat_ext(MNE_Repo_Mat):
+class Bootstrap(MNE_Repo_Mat):
 
     def __init__(self):
         super()
